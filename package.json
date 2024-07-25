@@ -45,7 +45,15 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "msw": "^2.3.4",
+    "msw-storybook-addon": "^2.0.3",
     "storybook": "^8.2.6",
     "typescript": "~5.5.2"
+  },
+  "msw": {
+    "workerDirectory": [
+      "src",
+      "public"
+    ]
   }
 }
