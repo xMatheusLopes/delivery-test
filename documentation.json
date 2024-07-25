@@ -66,7 +66,7 @@
         },
         {
             "name": "HelloComponent",
-            "id": "component-HelloComponent-f2ab5bce13ff31d6f0ad80ae4aa88413a4b6d8d743f9bf8b4163b1ac419a08b554bc6d588e49527e576a6c891acbf47b972cac946065d66f7eb6fe75345cab0d",
+            "id": "component-HelloComponent-adc1a72117f570a4ba7589d752a7e43ec3f0081dadd201ea7163a9f02afb884c311afcd091d2718031a8cd0c7ad5fa3f06311542efa063a0ebf39e25f3961f24",
             "file": "src/app/hello/hello.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -109,6 +109,32 @@
             ],
             "methodsClass": [
                 {
+                    "name": "callApi",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "any",
+                    "typeParameters": [],
+                    "line": 33,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "modifierKind": [
+                        125
+                    ]
+                },
+                {
+                    "name": "getContent",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 27,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "modifierKind": [
+                        125
+                    ]
+                },
+                {
                     "name": "ngOnInit",
                     "args": [],
                     "optional": false,
@@ -124,7 +150,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 25,
+                    "line": 23,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "modifierKind": [
@@ -146,7 +172,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { HttpClient } from '@angular/common/http';\nimport { Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'app-hello',\n  standalone: true,\n  imports: [CommonModule],\n  templateUrl: './hello.component.html',\n  styleUrl: './hello.component.scss'\n})\nexport class HelloComponent {\n  @Input() title = 'hello works!';\n\n  public content: any;\n\n  constructor(private http: HttpClient) {}\n\n  ngOnInit() {\n    this.http.get('https://viacep.com.br/ws/01001000/json/').subscribe(res => {\n      this.content = res;\n    })\n  }\n\n  public resetTitle() {\n    this.title = 'hello works';\n  }\n\n\n}\n",
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { HttpClient } from '@angular/common/http';\nimport { Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'app-hello',\n  standalone: true,\n  imports: [CommonModule],\n  templateUrl: './hello.component.html',\n  styleUrl: './hello.component.scss'\n})\nexport class HelloComponent {\n  @Input() title = 'hello works!';\n\n  public content: any;\n\n  constructor(private http: HttpClient) {}\n\n  ngOnInit() {\n    this.getContent();\n  }\n\n  public resetTitle() {\n    this.title = 'hello works';\n  }\n\n  public getContent() {\n    this.callApi().subscribe(res => {\n      this.content = res;\n    })\n  }\n\n  public callApi() {\n    return this.http.get('https://viacep.com.br/ws/01001000/json/');\n  }\n}\n",
             "styleUrl": "./hello.component.scss",
             "assetsDirs": [],
             "styleUrlsData": "",
@@ -225,6 +251,16 @@
                 "defaultValue": "[\n  // Intercept \"GET https://example.com/user\" requests...\n  http.get('https://viacep.com.br/ws/01001000/json/', () => {\n    // ...and respond to them using this JSON response.\n    return HttpResponse.json({\n      id: 'c7b3d8e0-5e0b-4b0f-8b3a-3b9f4b3d3b3d',\n      firstName: 'John',\n      lastName: 'Maverick',\n    })\n  }),\n]"
             },
             {
+                "name": "server",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/mocks/node.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "setupServer(...handlers)"
+            },
+            {
                 "name": "worker",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -298,6 +334,18 @@
                     "defaultValue": "[\n  // Intercept \"GET https://example.com/user\" requests...\n  http.get('https://viacep.com.br/ws/01001000/json/', () => {\n    // ...and respond to them using this JSON response.\n    return HttpResponse.json({\n      id: 'c7b3d8e0-5e0b-4b0f-8b3a-3b9f4b3d3b3d',\n      firstName: 'John',\n      lastName: 'Maverick',\n    })\n  }),\n]"
                 }
             ],
+            "src/mocks/node.ts": [
+                {
+                    "name": "server",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/mocks/node.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "setupServer(...handlers)"
+                }
+            ],
             "src/mocks/browser.ts": [
                 {
                     "name": "worker",
@@ -358,7 +406,7 @@
                 "linktype": "component",
                 "name": "HelloComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/6",
+                "coverageCount": "0/8",
                 "status": "low"
             },
             {
@@ -407,6 +455,16 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "handlers",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/mocks/node.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "server",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"

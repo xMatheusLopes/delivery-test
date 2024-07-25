@@ -17,14 +17,20 @@ export class HelloComponent {
   constructor(private http: HttpClient) {}
 
   ngOnInit() {
-    this.http.get('https://viacep.com.br/ws/01001000/json/').subscribe(res => {
-      this.content = res;
-    })
+    this.getContent();
   }
 
   public resetTitle() {
     this.title = 'hello works';
   }
 
+  public getContent() {
+    this.callApi().subscribe(res => {
+      this.content = res;
+    })
+  }
 
+  public callApi() {
+    return this.http.get('https://viacep.com.br/ws/01001000/json/');
+  }
 }
