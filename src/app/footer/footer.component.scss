@@ -1,4 +1,31 @@
+@import '@src/variables.scss';
+
 :host {
   display: flex;
   flex-grow: 0;
+  background-color: $primary-light;
+  color: $accent-light;
+  height: 3rem;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+
+  img {
+    width: 1rem;
+    margin-left: .5rem;
+  }
+
+  p {
+    margin-left: 1rem;
+  }
+
+  a {
+    text-decoration: none;
+    margin-left: 0.2rem;
+    color: inherit;
+    font-weight: 500;
+    display: flex;
+  }
 }

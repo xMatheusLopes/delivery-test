@@ -15,7 +15,6 @@ export class ToolbarComponent {
   constructor(private sidenavService: SidenavService) {}
 
   public openSideNav() {
-    console.log('aqui')
     this.sidenavService.toggleSidenav();
   }
 }

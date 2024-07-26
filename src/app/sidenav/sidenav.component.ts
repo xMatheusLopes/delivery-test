@@ -20,23 +20,15 @@ export class SidenavComponent {
   @ViewChild('drawer', { static: true }) drawer: MatDrawer | undefined;
 
   public sidenavOpened$: Observable<boolean>;
-  public list = [
-    {
-      title: 'Dashboard',
-      isActive: true
-    },
-    {
-      title: 'Entregas',
-      isActive: false
-    }
-  ]
+  public sidenavItems: Array<{title: string, isActive: boolean}> = [];
   
   constructor(private sidenavService: SidenavService) {
     this.sidenavOpened$ = this.sidenavService.getSidenavOpenAction();
   }
 
-  ngAfterViewInit() {
+  public ngAfterViewInit() {
     this.subscribeDrawerToggle();
+    this.setupSideNavConfiguration();
   }
 
   private subscribeDrawerToggle() {
@@ -44,4 +36,17 @@ export class SidenavComponent {
       opened ? this.drawer!.open() : this.drawer!.close()
     });
   }  
+  
+  private setupSideNavConfiguration() {
+    this.sidenavItems = [
+      {
+        title: 'Dashboard',
+        isActive: true
+      },
+      {
+        title: 'Entregas',
+        isActive: false
+      }
+    ]
+  }
 }
