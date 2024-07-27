@@ -1,7 +1,7 @@
-import { Component, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, OnDestroy, ViewChild } from '@angular/core';
 import { SidenavService } from './services/sidenav.service';
 import { CommonModule } from '@angular/common';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable, Subscription } from 'rxjs';
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatDrawer, MatSidenavModule } from '@angular/material/sidenav';
@@ -16,10 +16,11 @@ import { MatIconModule } from '@angular/material/icon';
   templateUrl: './sidenav.component.html',
   styleUrl: './sidenav.component.scss'
 })
-export class SidenavComponent {
+export class SidenavComponent implements AfterViewInit, OnDestroy {
   @ViewChild('drawer', { static: true }) drawer: MatDrawer | undefined;
 
-  public sidenavOpened$: Observable<boolean>;
+  public sidenavOpened$: BehaviorSubject<boolean>;
+  public subscriptions$: Subscription[] = [];
   public sidenavItems: Array<{title: string, isActive: boolean}> = [];
   
   constructor(private sidenavService: SidenavService) {
@@ -31,13 +32,15 @@ export class SidenavComponent {
     this.setupSideNavConfiguration();
   }
 
-  private subscribeDrawerToggle() {
-    this.sidenavOpened$.subscribe(opened => {
+  public subscribeDrawerToggle() {
+    const sub$ = this.sidenavOpened$.subscribe(opened => {
       opened ? this.drawer!.open() : this.drawer!.close()
-    });
+    })
+
+    this.subscriptions$.push(sub$);
   }  
   
-  private setupSideNavConfiguration() {
+  public setupSideNavConfiguration() {
     this.sidenavItems = [
       {
         title: 'Dashboard',
@@ -48,5 +51,9 @@ export class SidenavComponent {
         isActive: false
       }
     ]
+  }
+
+  public ngOnDestroy(): void {
+    this.subscriptions$.forEach(sub => sub.unsubscribe());
   }
 }

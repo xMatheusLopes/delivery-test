@@ -1,5 +1,6 @@
-import { http, HttpResponse } from 'msw'
 import deliveries from './data/deliveries.json';
+
+import { http, HttpResponse } from 'msw'
  
 export const handlers = [
   http.get('/deliveries', () => {
