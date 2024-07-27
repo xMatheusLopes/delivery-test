@@ -2,8 +2,6 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ToolbarComponent } from './toolbar.component';
 import { SidenavService } from '../sidenav/services/sidenav.service';
-import { provideHttpClient } from '@angular/common/http';
-import { provideHttpClientTesting } from '@angular/common/http/testing';
 import { vi } from 'vitest';
 
 describe('ToolbarComponent', () => {
@@ -12,7 +10,6 @@ describe('ToolbarComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      providers: [provideHttpClient(), provideHttpClientTesting()],
       imports: [ToolbarComponent]
     })
     .compileComponents();

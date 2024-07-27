@@ -29,7 +29,7 @@ export class SidenavComponent implements AfterViewInit, OnDestroy {
 
   public ngAfterViewInit() {
     this.subscribeDrawerToggle();
-    this.setupSideNavConfiguration();
+    // this.setupSideNavConfiguration();
   }
 
   public subscribeDrawerToggle() {

@@ -2,16 +2,11 @@ import { TestBed } from '@angular/core/testing';
 
 import { SidenavService } from './sidenav.service';
 import { Observable } from 'rxjs';
-import { provideHttpClient } from '@angular/common/http';
-import { provideHttpClientTesting } from '@angular/common/http/testing';
 
 describe('SidenavService', () => {
   let service: SidenavService;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({
-      providers: [provideHttpClient(), provideHttpClientTesting()]
-    });
     service = TestBed.inject(SidenavService);
   });
 

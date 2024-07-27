@@ -3,8 +3,6 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { SidenavComponent } from './sidenav.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Subscription } from 'rxjs';
-import { provideHttpClient } from '@angular/common/http';
-import { provideHttpClientTesting } from '@angular/common/http/testing';
 import { render, screen } from '@testing-library/angular'
 import { vi } from 'vitest';
 
@@ -14,7 +12,6 @@ describe('SidenavComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      providers: [provideHttpClient(), provideHttpClientTesting()],
       imports: [SidenavComponent, BrowserAnimationsModule]
     })
     .compileComponents();
@@ -54,7 +51,7 @@ describe('SidenavComponent', () => {
   it('should test if necessary routine was done on ngAfterViewInit', () => {
     const spyFns = [
       vi.spyOn(component, 'subscribeDrawerToggle'),
-      vi.spyOn(component, 'setupSideNavConfiguration')
+      // vi.spyOn(component, 'setupSideNavConfiguration')
     ]
 
     component.ngAfterViewInit();
@@ -64,3 +61,11 @@ describe('SidenavComponent', () => {
     })
   })
 });
+
+describe('SidenavComponent UI', () => {
+  it('should test UI', async () => {
+    await render(SidenavComponent, {})
+
+    expect(screen.getByText('Content')).toBeInTheDocument()
+  })
+})
