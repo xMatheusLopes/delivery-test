@@ -3,7 +3,6 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { SidenavComponent } from './sidenav.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Subscription } from 'rxjs';
-import { render, screen } from '@testing-library/angular'
 import { vi } from 'vitest';
 
 describe('SidenavComponent', () => {
@@ -21,6 +20,7 @@ describe('SidenavComponent', () => {
   });
 
   it('should create', () => {
+    fixture.detectChanges();
     expect(component).toBeTruthy();
   });
 
@@ -31,11 +31,12 @@ describe('SidenavComponent', () => {
 
   it('should create list of menu items', () => {
     component.setupSideNavConfiguration();
-    expect(component.sidenavItems.length).toBeGreaterThan(0);
+    expect(component.sidenavItems().length).toBeGreaterThan(0);
 
-    component.sidenavItems.forEach(item => {
+    component.sidenavItems().forEach(item => {
       expect(item.isActive).toBeDefined();
       expect(item.title).toBeDefined();
+      expect(item.route).toBeDefined();
     })
   })
 
@@ -50,8 +51,7 @@ describe('SidenavComponent', () => {
 
   it('should test if necessary routine was done on ngAfterViewInit', () => {
     const spyFns = [
-      vi.spyOn(component, 'subscribeDrawerToggle'),
-      // vi.spyOn(component, 'setupSideNavConfiguration')
+      vi.spyOn(component, 'subscribeDrawerToggle')
     ]
 
     component.ngAfterViewInit();
@@ -60,12 +60,5 @@ describe('SidenavComponent', () => {
       expect(spyFn).toHaveBeenCalled();
     })
   })
+  
 });
-
-describe('SidenavComponent UI', () => {
-  it('should test UI', async () => {
-    await render(SidenavComponent, {})
-
-    expect(screen.getByText('Content')).toBeInTheDocument()
-  })
-})

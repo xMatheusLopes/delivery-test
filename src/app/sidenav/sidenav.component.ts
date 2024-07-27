@@ -1,7 +1,7 @@
-import { AfterViewInit, Component, OnDestroy, ViewChild } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, Component, OnDestroy, signal, ViewChild, WritableSignal } from '@angular/core';
 import { SidenavService } from './services/sidenav.service';
-import { CommonModule } from '@angular/common';
-import { BehaviorSubject, Observable, Subscription } from 'rxjs';
+import { CommonModule, Location } from '@angular/common';
+import { BehaviorSubject, Subscription } from 'rxjs';
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatDrawer, MatSidenavModule } from '@angular/material/sidenav';
@@ -14,25 +14,29 @@ import { MatIconModule } from '@angular/material/icon';
   standalone: true,
   imports: [CommonModule, MatButtonModule, MatSidenavModule, RouterOutlet, MatListModule, MatIconModule],
   templateUrl: './sidenav.component.html',
-  styleUrl: './sidenav.component.scss'
+  styleUrl: './sidenav.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SidenavComponent implements AfterViewInit, OnDestroy {
   @ViewChild('drawer', { static: true }) drawer: MatDrawer | undefined;
 
   public sidenavOpened$: BehaviorSubject<boolean>;
   public subscriptions$: Subscription[] = [];
-  public sidenavItems: Array<{title: string, isActive: boolean}> = [];
+  public sidenavItems: WritableSignal<Array<{title: string, isActive: boolean, route: string}>> = signal([]);
   
-  constructor(private sidenavService: SidenavService) {
+  constructor(
+    private sidenavService: SidenavService, 
+    private location: Location
+  ) {
     this.sidenavOpened$ = this.sidenavService.getSidenavOpenAction();
   }
 
-  public ngAfterViewInit() {
+  ngAfterViewInit() {
     this.subscribeDrawerToggle();
-    // this.setupSideNavConfiguration();
+    this.setupSideNavConfiguration();
   }
 
-  public subscribeDrawerToggle() {
+  subscribeDrawerToggle() {
     const sub$ = this.sidenavOpened$.subscribe(opened => {
       opened ? this.drawer!.open() : this.drawer!.close()
     })
@@ -40,20 +44,29 @@ export class SidenavComponent implements AfterViewInit, OnDestroy {
     this.subscriptions$.push(sub$);
   }  
   
-  public setupSideNavConfiguration() {
-    this.sidenavItems = [
+  setupSideNavConfiguration(){
+    this.sidenavItems.set([
       {
         title: 'Dashboard',
-        isActive: true
+        isActive: this.isActive('dashboard'),
+        route: '/dashboard'
       },
       {
         title: 'Entregas',
-        isActive: false
+        isActive: this.isActive('entregas'),
+        route: '/entregas'
       }
-    ]
+    ]);
   }
 
-  public ngOnDestroy(): void {
+  isActive(route: string): boolean {
+    const currentPath = this.location.path();
+    const expression = `^/${route}`;
+    return new RegExp(expression).test(`${currentPath}`);
+  }
+
+  ngOnDestroy(): void {
     this.subscriptions$.forEach(sub => sub.unsubscribe());
   }
 }
+

@@ -14,7 +14,7 @@ import { SidenavService } from '../sidenav/services/sidenav.service';
 export class ToolbarComponent {
   constructor(private sidenavService: SidenavService) {}
 
-  public openSideNav() {
+  openSideNav() {
     this.sidenavService.toggleSidenav();
   }
 }

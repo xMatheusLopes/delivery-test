@@ -1,14 +1,13 @@
 <mat-drawer-container class="drawer-container" autosize>
   <mat-drawer #drawer class="drawer-sidenav" mode="side">
     <mat-nav-list>
-      @for (item of sidenavItems; track item) {
-        <a mat-list-item href="..." [activated]="item.isActive">{{ item.title }}</a>
+      @for (item of sidenavItems(); track item) {
+        <a mat-list-item [href]="item.route" [activated]="item.isActive">{{ item.title }}</a>
       }
     </mat-nav-list>
   </mat-drawer>
 
   <div class="drawer-sidenav-content">
-    Content <br>
     <router-outlet></router-outlet>
   </div>
 

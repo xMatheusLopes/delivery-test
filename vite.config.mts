@@ -1,7 +1,6 @@
 /// <reference types="vitest" />
 
 import angular from "@analogjs/vite-plugin-angular";
-import { resolve } from "@angular/compiler-cli";
 
 import { defineConfig } from "vite";
 
@@ -15,6 +14,10 @@ export default defineConfig(({ mode }) => {
       setupFiles: ["src/test-setup.ts"],
       include: ["**/*.spec.ts"],
       reporters: ["default"],
+      coverage: {
+        provider: 'istanbul',
+        include: ["src/app/**"]
+      }
     },
     define: {
       "import.meta.vitest": mode !== "production",
