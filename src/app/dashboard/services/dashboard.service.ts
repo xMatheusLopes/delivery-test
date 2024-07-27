@@ -12,12 +12,13 @@ import { Observable } from 'rxjs';
 export class DashboardService {
   constructor(private deliveryService: DeliveryService) { }
 
-  getSuccessDeliveriesData(): Observable<SuccessDeliveryData[]> {
+  loadAllReports() {
     return new Observable(observe => {
       this.deliveryService.getAllDeliveries().subscribe({
         next: (data) => {
-          const report = this.fillSuccessDeliveriesReport(data);
-          observe.next(Array.from(report.values()));
+          this.fillSuccessDeliveriesReport(data);
+          this.fillFailureDeliveriesReport(data);
+          this.fillNeighborhoodDeliveriesReport(data);
           observe.complete();
         }, error: (err) => {
           console.error(err);
@@ -26,38 +27,101 @@ export class DashboardService {
     })
   }
 
-  fillSuccessDeliveriesReport(data: Delivery[]): Map<string, SuccessDeliveryData> {
-    const report = new Map<string, SuccessDeliveryData>();
+  fillNeighborhoodDeliveriesReport(data: Delivery[]) {
+    const mapDeliveryStatusToReportField = {
+      'ENTREGUE': 'totalDeliveriesDone',
+      'PENDENTE': undefined,
+      'INSUCESSO': undefined,
+    }
 
+    const reportDestiny = this.fillGeneric(data, this.buildNeighborhoodDriverMap, new Map<string, NeighborhoodDeliveryData>(), mapDeliveryStatusToReportField, ['cliente_destino.bairro', 'cliente_origem.bairro'], 'totalDeliveries');
+
+    console.log('Neighborhood destino', reportDestiny);
+  }
+
+  fillFailureDeliveriesReport(data: Delivery[]) {
+    const mapDeliveryStatusToReportField = {
+      'ENTREGUE': undefined,
+      'PENDENTE': undefined,
+      'INSUCESSO': 'deliveriesFailured',
+    }
+    const report = this.fillGeneric(data, this.buildFailureDriverMap, new Map<string, FailureDeliveryData>(), mapDeliveryStatusToReportField, ['motorista.nome']);
+    console.log('Failure', report);
+  }
+
+  fillGeneric(
+    data: Delivery[], 
+    mapBuilder: Function, 
+    report: Map<string, FailureDeliveryData | SuccessDeliveryData | NeighborhoodDeliveryData>,
+    mapDeliveryStatusToReportField: {[key: string]: string | undefined},
+    keys: string[],
+    totalKey: string = ''
+  ) {
+
+    data.forEach(item => {
+      keys.forEach(key => {
+        !report.has(this.resolvePath(item, key, {})) && mapBuilder(report, item, this.resolvePath(item, key, {}));
+        const mappedData = report.get(this.resolvePath(item, key, {}))!;
+        const status: string | undefined = mapDeliveryStatusToReportField[item.status_entrega]
+        status && mappedData[status as keyof typeof mappedData]++;
+        totalKey && mappedData[totalKey as keyof typeof mappedData]++;
+        report.set(this.resolvePath(item, key, {}), mappedData!);
+      })
+    });
+
+    return Array.from(report.values());
+  }
+
+  fillSuccessDeliveriesReport(data: Delivery[]) {
     const mapDeliveryStatusToReportField = {
       'ENTREGUE': 'deliveriesDone',
       'PENDENTE': 'deliveriesInProgress',
       'INSUCESSO': undefined,
     }
+    const report = this.fillGeneric(data, this.buildSuccessDriverMap, new Map<string, SuccessDeliveryData>(), mapDeliveryStatusToReportField, ['motorista.nome']);
 
-    data.forEach(item => {
-      !report.has(item.motorista.nome) && this.initSuccessDriverMap(report, item);
-      const updatedData = report.get(item.motorista.nome)!;
-      const status: string | undefined = mapDeliveryStatusToReportField[item.status_entrega]
-      status && updatedData[status as keyof typeof updatedData]++;
-      report.set(item.motorista.nome, updatedData!);
-    });
-
-    return report;
+    console.log('Success', report);
   }
 
   getFailureDeliveriesData(): FailureDeliveryData[] {
     return [];
   }
+
   getNeighborhoodDeliveriesData(): NeighborhoodDeliveryData[] {
     return [];
   }
 
-  initSuccessDriverMap(report: Map<string, SuccessDeliveryData>, item: Delivery) {
-    report.set(item.motorista.nome, {
+  getSuccessDeliveriesData(): SuccessDeliveryData[] {
+    return [];
+  }
+
+  buildSuccessDriverMap(report: Map<string, SuccessDeliveryData>, item: Delivery, key: string) {
+    report.set(key, {
       deliveriesDone: 0,
       deliveriesInProgress: 0,
-      driverName: item.motorista.nome
+      driverName: key
     });
   }
+
+  buildFailureDriverMap(report: Map<string, FailureDeliveryData>, item: Delivery, key: string) {
+    report.set(key, {
+      deliveriesFailured: 0,
+      driverName: key
+    });
+  }
+
+  buildNeighborhoodDriverMap(report: Map<string, NeighborhoodDeliveryData>, item: Delivery, key: string) {
+    report.set(key, {
+      totalDeliveries: 0,
+      totalDeliveriesDone: 0,
+      neighborhood: key
+    });
+  }
+
+  resolvePath(object: any, path: string, defaultValue: unknown) {
+    return path
+      .split('.')
+      .reduce((o: any, p: string) => o ? o[p] : defaultValue, object)
+  }
+
 }

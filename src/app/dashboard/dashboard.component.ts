@@ -21,21 +21,25 @@ export class DashboardComponent implements OnInit {
   constructor(private dashboardService: DashboardService) {}
 
   ngOnInit(): void {
-    this.loadSuccessDeliveriesData();
-    this.loadFailureDeliveriesData();
-    this.loadNeighborhoodDeliveriesData();
+    this.loadAllReports();
+    
   }
-  
-  loadSuccessDeliveriesData() {
-    this.dashboardService.getSuccessDeliveriesData().subscribe(res => {
-      this.successDeliveriesTableData = signal(res);
-      console.log(this.successDeliveriesTableData());
+
+  loadAllReports() {
+    this.dashboardService.loadAllReports().subscribe(res => {
+      this.loadSuccessDeliveriesDataTable();
+      this.loadFailureDeliveriesDataTable();
+      this.loadNeighborhoodDeliveriesDataTable();
     })
   }
-  loadFailureDeliveriesData() {
-    this.failureDeliveriesTableData = signal(this.dashboardService.getFailureDeliveriesData());
+
+  loadSuccessDeliveriesDataTable() {
+    this.dashboardService.getSuccessDeliveriesData();
   }
-  loadNeighborhoodDeliveriesData() {
-    this.neighborhoodDeliveriesTableData = signal(this.dashboardService.getNeighborhoodDeliveriesData());
+  loadFailureDeliveriesDataTable() {
+    this.dashboardService.getFailureDeliveriesData();
+  }
+  loadNeighborhoodDeliveriesDataTable() {
+    this.dashboardService.getNeighborhoodDeliveriesData();
   }
 }
