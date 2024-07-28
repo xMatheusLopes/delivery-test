@@ -31,11 +31,19 @@ export class DeliveriesComponent implements OnInit {
     this.loadDeliveries();
   }
 
+  /**
+   * Update filters that came from external component, and than, update list
+   * @param filters DeliveryFilterConfiguration
+   */
   updateFilters(filters: DeliveryFilterConfiguration) {
     this.filters = filters;
     this.loadDeliveries();
   }
 
+  /**
+   * Update pagination, and than, update list
+   * @param event PageEvent
+   */
   updatePagination(event: PageEvent) {
     const page = event.pageIndex * 10;
     const pageSize = page + 10;
@@ -46,9 +54,14 @@ export class DeliveriesComponent implements OnInit {
     this.loadDeliveries();
   }
 
+  /**
+   * Load list
+   */
   loadDeliveries() {
     this.deliveryService.getDeliveries(this.filters).subscribe(res => {
       if (res.body) {
+
+        // Get source data to populate table
         const sourceData: DeliveryTableSourceData[] = res.body.map(item => {
           return {
             driver: item.motorista.nome,
@@ -61,11 +74,11 @@ export class DeliveriesComponent implements OnInit {
           }
         });
 
+        // Set table items
         this.tableData.set({
           sourceData,
           displayedColumns: ['driver', 'document', 'destiny-client', 'destiny-address', 'origin-client', 'origin-address', 'status']
         })
-
         this.tableTotalItems.set(Number(res.headers.get('total-items')));
       }
     })

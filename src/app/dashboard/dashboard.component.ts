@@ -29,6 +29,9 @@ export class DashboardComponent implements OnInit {
     this.loadAllReports();
   }
 
+  /**
+   * Load all report data and than, mount the tables
+   */
   loadAllReports() {
     this.dashboardService.loadAllReports().subscribe(() => {
       this.loadSuccessDeliveriesDataTable();
@@ -37,6 +40,9 @@ export class DashboardComponent implements OnInit {
     })
   }
 
+  /**
+   * Mount success deliveries table data 
+   */
   loadSuccessDeliveriesDataTable() {
     const displayedColumns = ['name', 'total-pending', 'total-done'];
     const sourceData = this.dashboardService.getSuccessDeliveriesData();
@@ -46,6 +52,10 @@ export class DashboardComponent implements OnInit {
       sourceData
     })
   }
+
+  /**
+   * Mount failure deliveries table data 
+   */
   loadFailureDeliveriesDataTable() {
     const displayedColumns = ['name', 'total-failured'];
     const sourceData = this.dashboardService.getFailureDeliveriesData();
@@ -55,6 +65,10 @@ export class DashboardComponent implements OnInit {
       sourceData
     })
   }
+
+  /**
+   * Mount neighborhood deliveries table data 
+   */
   loadNeighborhoodDeliveriesDataTable() {
     const displayedColumns = ['neighborhood', 'total-done', 'total'];
     const sourceData = this.dashboardService.getNeighborhoodDeliveriesData();
@@ -65,6 +79,10 @@ export class DashboardComponent implements OnInit {
     })
   }
 
+  /**
+   * Used to better masonry integration on responsive testing 
+   * @param _event 
+   */
   onResize(_event: UIEvent) {
     clearTimeout(this.resizingDebounce);
     this.resizing.set(true);

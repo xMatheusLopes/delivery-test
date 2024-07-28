@@ -36,6 +36,9 @@ export class SidenavComponent implements AfterViewInit, OnDestroy {
     this.setupSideNavConfiguration();
   }
 
+  /**
+   * Drawer toggler handler
+   */
   subscribeDrawerToggle() {
     const sub$ = this.sidenavOpened$.subscribe(opened => {
       opened ? this.drawer!.open() : this.drawer!.close()
@@ -44,6 +47,9 @@ export class SidenavComponent implements AfterViewInit, OnDestroy {
     this.subscriptions$.push(sub$);
   }  
   
+  /**
+   * Just setup sidenav items
+   */
   setupSideNavConfiguration(){
     this.sidenavItems.set([
       {
@@ -57,6 +63,11 @@ export class SidenavComponent implements AfterViewInit, OnDestroy {
     ]);
   }
 
+  /**
+   * Match current route with sidenav item
+   * @param route string route to compare
+   * @returns boolean if is active or not
+   */
   isActive(route: string): boolean {
     const currentPath = this.location.path();
     const expression = `^${route}`;
