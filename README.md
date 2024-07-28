@@ -12,5 +12,5 @@ Run `npm run start` for a dev server. Navigate to `http://localhost:4200/`. The 
 
 ## Running unit tests
 
-Run `npm run test` to execute the unit tests via [Vitest](https://vitest.dev).
+Run `npm run test` to execute the unit tests via [Vitest](https://vitest.dev).\
 Run `npm run converage` to execute the unit tests coverage report
