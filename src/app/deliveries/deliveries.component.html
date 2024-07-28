@@ -1,1 +1,42 @@
-<p>deliveries works!</p>
+<div class="page-container">
+  <div class="page">
+    <section class="header">
+      <h3>Entregas</h3>
+    </section>
+    
+    <section class="filters">
+      <app-deliveries-filter (loadDeliveries)="updateFilters($event)"/>
+    </section>
+    
+    @if (tableData()?.sourceData) {
+      <section class="table">
+        <div class="table-container">
+          <p>Lista de Entregas</p>
+    
+          <app-table 
+            [sourceData]="tableData()!.sourceData"
+            [displayedColumns]="tableData()!.displayedColumns"
+            [bindDisplayedColumnWithElement]="[
+              {def: 'driver', elementName: 'driver', displayColumnName: 'Motorista'}, 
+              {def: 'document', elementName: 'document', displayColumnName: 'N. Documento'}, 
+              {def: 'origin-client', elementName: 'originClient', displayColumnName: 'Cliente origem'},
+              {def: 'origin-address', elementName: 'originAddress', displayColumnName: 'Endereço origem'},
+              {def: 'destiny-client', elementName: 'destinyClient', displayColumnName: 'Cliente destino'},
+              {def: 'destiny-address', elementName: 'destinyAddress', displayColumnName: 'Endereço destino'},
+              {def: 'status', elementName: 'status', displayColumnName: 'Status'},
+            ]"
+          />
+        </div>
+      </section>
+    
+      <section class="pagination">
+        <mat-paginator 
+          [length]="tableTotalItems"
+          [pageSize]="10"
+          (page)="updatePagination($event)"
+          aria-label="Select page" />
+      </section>
+    }
+  </div>
+</div>
+

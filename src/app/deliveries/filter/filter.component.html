@@ -1,0 +1,40 @@
+<div class="row">
+  <div class="col-12">
+    <mat-accordion>
+      <mat-expansion-panel (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+        <mat-expansion-panel-header>
+          <mat-panel-title> Filtros </mat-panel-title>
+        </mat-expansion-panel-header>
+        
+        <form [formGroup]="filterForm" (ngSubmit)="submit()">
+          <div class="row">
+            <div class="col-sm-6 col-12">
+              <mat-form-field appearance="outline">
+                <mat-label>Nome do motorista</mat-label>
+                <input matInput formControlName="name">
+              </mat-form-field>
+            </div>
+
+            <div class="col-sm-6 col-12">
+              <mat-form-field appearance="outline">
+                <mat-label>Status</mat-label>
+                <mat-select formControlName="status">
+                  <mat-option value="">Todos</mat-option>
+                  @for (option of statusOptions(); track option) {
+                    <mat-option [value]="option">{{ option | titlecase }}</mat-option>
+                  }
+                </mat-select>
+              </mat-form-field>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12">
+              <button type="submit" mat-flat-button>Filtrar</button>
+            </div>
+          </div>
+        </form>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+</div>

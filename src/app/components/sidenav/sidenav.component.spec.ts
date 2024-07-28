@@ -34,7 +34,6 @@ describe('SidenavComponent', () => {
     expect(component.sidenavItems().length).toBeGreaterThan(0);
 
     component.sidenavItems().forEach(item => {
-      expect(item.isActive).toBeDefined();
       expect(item.title).toBeDefined();
       expect(item.route).toBeDefined();
     })

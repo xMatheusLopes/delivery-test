@@ -1,3 +1,5 @@
+import { Status } from "./Status"
+
 export type Delivery = {
   id: number,  
   documento: number,
@@ -16,5 +18,5 @@ export type Delivery = {
     bairro: string,
     cidade: string
   },
-  status_entrega: 'ENTREGUE' | 'PENDENTE' | 'INSUCESSO'
+  status_entrega: Status
 }

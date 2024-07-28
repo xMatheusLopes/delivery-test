@@ -22,7 +22,7 @@ export class SidenavComponent implements AfterViewInit, OnDestroy {
 
   public sidenavOpened$: BehaviorSubject<boolean>;
   public subscriptions$: Subscription[] = [];
-  public sidenavItems: WritableSignal<Array<{title: string, isActive: boolean, route: string}>> = signal([]);
+  public sidenavItems: WritableSignal<Array<{title: string, route: string}>> = signal([]);
   
   constructor(
     private sidenavService: SidenavService, 
@@ -48,12 +48,10 @@ export class SidenavComponent implements AfterViewInit, OnDestroy {
     this.sidenavItems.set([
       {
         title: 'Dashboard',
-        isActive: this.isActive('dashboard'),
         route: '/dashboard'
       },
       {
         title: 'Entregas',
-        isActive: this.isActive('entregas'),
         route: '/entregas'
       }
     ]);
@@ -61,7 +59,7 @@ export class SidenavComponent implements AfterViewInit, OnDestroy {
 
   isActive(route: string): boolean {
     const currentPath = this.location.path();
-    const expression = `^/${route}`;
+    const expression = `^${route}`;
     return new RegExp(expression).test(`${currentPath}`);
   }
 

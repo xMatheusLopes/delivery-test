@@ -1,0 +1,5 @@
+export enum Status {
+  ENTREGUE = 'ENTREGUE',
+  PENDENTE = 'PENDENTE',
+  INSUCESSO = 'INSUCESSO'
+}
