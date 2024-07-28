@@ -1,1 +1,56 @@
-<p>dashboard works!</p>
+<div class="container">
+  <ngx-masonry (window:resize)="onResize($event)">
+    <div class="row" [ngClass]="{'opacity-0': resizing()}">
+      @if (successDeliveriesTableData()?.sourceData) {
+        <div ngxMasonryItem  class="col-lg-6 col-12">
+          <app-dashboard-table
+            title="Andamento de entregas"
+            subtitle="Pedidos que estão em rota de entrega ou finalizados"
+            [sourceData]="successDeliveriesTableData()!.sourceData"
+            [displayedColumns]="successDeliveriesTableData()!.displayedColumns"
+            [bindDisplayedColumnWithElement]="[
+              {def: 'name', elementName: 'driverName', displayColumnName: 'Nome do motorista'}, 
+              {def: 'total-pending', elementName: 'deliveriesInProgress', displayColumnName: 'Qtde. Entregas pendentes'}, 
+              {def: 'total-done', elementName: 'deliveriesDone', displayColumnName: 'Qtde. Entregas bem sucedidas'}
+            ]"
+          />
+        </div>
+      }
+  
+      @if (neighborhoodDeliveriesTableData()?.sourceData) {
+        <div ngxMasonryItem  class="col-lg-6 col-12">
+          <app-dashboard-table
+            title="Entregas por bairro"
+            subtitle="Pedidos por bairro, seja de origem ou destino"
+            [sourceData]="neighborhoodDeliveriesTableData()!.sourceData"
+            [displayedColumns]="neighborhoodDeliveriesTableData()!.displayedColumns"
+            [bindDisplayedColumnWithElement]="[
+              {def: 'neighborhood', elementName: 'neighborhood', displayColumnName: 'Bairro'}, 
+              {def: 'total-done', elementName: 'totalDeliveriesDone', displayColumnName: 'Qtde. Entregas finalizadas'}, 
+              {def: 'total', elementName: 'totalDeliveries', displayColumnName: 'Qtde. Total de entregas'}
+            ]"
+          />
+        </div>
+      }
+  
+      @if (failureDeliveriesTableData()?.sourceData) {
+        <div ngxMasonryItem  class="col-lg-6 col-12">
+          <app-dashboard-table
+            title="Entregas mal sucedida"
+            subtitle="Pedidos que tiveram insucesso na entrega"
+            [sourceData]="failureDeliveriesTableData()!.sourceData"
+            [displayedColumns]="failureDeliveriesTableData()!.displayedColumns"
+            [bindDisplayedColumnWithElement]="[
+              {def: 'name', elementName: 'driverName', displayColumnName: 'Nome do motorista'}, 
+              {def: 'total-failured', elementName: 'deliveriesFailured', displayColumnName: 'Qtde. Entregas mal sucedidas'}
+            ]"
+          />
+        </div>
+      }
+    </div>
+  </ngx-masonry>
+</div>
+
+
+
+
