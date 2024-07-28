@@ -23,7 +23,7 @@ export class DeliveriesComponent implements OnInit {
   }
 
   tableData: WritableSignal<{ sourceData: DeliveryTableSourceData[], displayedColumns: string[] } | undefined> = signal(undefined)
-  tableTotalItems = 0;
+  tableTotalItems = signal(0);
 
   constructor(private deliveryService: DeliveryService) {}
 
@@ -66,7 +66,7 @@ export class DeliveriesComponent implements OnInit {
           displayedColumns: ['driver', 'document', 'destiny-client', 'destiny-address', 'origin-client', 'origin-address', 'status']
         })
 
-        this.tableTotalItems = Number(res.headers.get('total-items'));
+        this.tableTotalItems.set(Number(res.headers.get('total-items')));
       }
     })
   }

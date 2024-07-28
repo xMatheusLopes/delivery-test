@@ -4,7 +4,7 @@ import { FailureDeliveryData } from '../types/FailureDeliveryData';
 import { NeighborhoodDeliveryData } from '../types/NeighborhoodDeliveryData';
 import { DeliveryService } from '@src/app/deliveries/services/delivery.service';
 import { Delivery } from '@src/app/deliveries/types/Delivery';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
 import { ReportDataConfiguration } from '../types/ReportDataConfiguration';
 import { ReportType } from '../enums/ReportType';
 
@@ -98,7 +98,7 @@ export class DashboardService {
   }: ReportDataConfiguration) {
     data.forEach(item => {
       keys.forEach(key => {
-        !report.has(this.resolvePath(item, key, {})) && mapBuilder(report, item, this.resolvePath(item, key, {}));
+        !report.has(this.resolvePath(item, key, {})) && mapBuilder(report, this.resolvePath(item, key, {}));
         const mappedData = report.get(this.resolvePath(item, key, {}))!;
         const status: string | undefined = mapDeliveryStatusToReportField[item.status_entrega]
         status && mappedData[status as keyof typeof mappedData]++;
@@ -122,7 +122,7 @@ export class DashboardService {
     return this.reports.get(ReportType.SUCCESS_DELIVERY) as SuccessDeliveryData[];
   }
 
-  buildSuccessDriverMap(report: Map<string, SuccessDeliveryData>, item: Delivery, key: string) {
+  buildSuccessDriverMap(report: Map<string, SuccessDeliveryData>, key: string) {
     report.set(key, {
       deliveriesDone: 0,
       deliveriesInProgress: 0,
@@ -130,14 +130,14 @@ export class DashboardService {
     });
   }
 
-  buildFailureDriverMap(report: Map<string, FailureDeliveryData>, item: Delivery, key: string) {
+  buildFailureDriverMap(report: Map<string, FailureDeliveryData>, key: string) {
     report.set(key, {
       deliveriesFailured: 0,
       driverName: key
     });
   }
 
-  buildNeighborhoodDriverMap(report: Map<string, NeighborhoodDeliveryData>, item: Delivery, key: string) {
+  buildNeighborhoodDriverMap(report: Map<string, NeighborhoodDeliveryData>, key: string) {
     report.set(key, {
       totalDeliveries: 0,
       totalDeliveriesDone: 0,
@@ -150,5 +150,4 @@ export class DashboardService {
       .split('.')
       .reduce((o: any, p: string) => o ? o[p] : defaultValue, object)
   }
-
 }

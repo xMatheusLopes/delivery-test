@@ -8,6 +8,8 @@ import { getTestBed } from '@angular/core/testing';
 import { server } from './mocks/node'
 import { provideHttpClient } from '@angular/common/http';
 import { provideHttpClientTesting } from '@angular/common/http/testing';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 getTestBed().initTestEnvironment(
   BrowserDynamicTestingModule,
@@ -17,7 +19,8 @@ getTestBed().initTestEnvironment(
 beforeEach(() => {
   getTestBed().configureTestingModule(
     {
-      providers: [provideHttpClient(), provideHttpClientTesting()]
+      imports: [BrowserAnimationsModule],
+      providers: [provideHttpClient(), provideHttpClientTesting(), provideAnimationsAsync()]
     }
   )
 })

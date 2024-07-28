@@ -1,8 +1,8 @@
 import { Status } from "./Status"
 
 export type Delivery = {
-  id: number,  
-  documento: number,
+  id: string,  
+  documento: string,
   motorista: {
     nome: string
   },

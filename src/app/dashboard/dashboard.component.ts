@@ -21,7 +21,7 @@ export class DashboardComponent implements OnInit {
   public failureDeliveriesTableData: WritableSignal<{ displayedColumns: string[], sourceData: FailureDeliveryData[] } | undefined> = signal(undefined);
   public neighborhoodDeliveriesTableData: WritableSignal<{ displayedColumns: string[], sourceData: NeighborhoodDeliveryData[] } | undefined> = signal(undefined);
   public resizing = signal(false);
-  public resizingDebounce: any;
+  public resizingDebounce: ReturnType<typeof setTimeout> | undefined = undefined;
 
   constructor(private dashboardService: DashboardService) {}
 
