@@ -1,7 +1,549 @@
 {
     "pipes": [],
     "interfaces": [],
-    "injectables": [],
+    "injectables": [
+        {
+            "name": "DashboardService",
+            "id": "injectable-DashboardService-fc90deaeca2d68da10fe0340ba1d6d035ee6284c74054836cf0d395f0314c6ce83a97abcf0e4d8fb22137b1753f20d7bd6abac20d822b5ab0df016a1300a7380",
+            "file": "src/app/dashboard/services/dashboard.service.ts",
+            "properties": [
+                {
+                    "name": "reports",
+                    "defaultValue": "new Map()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Map<string | []>",
+                    "optional": false,
+                    "description": "",
+                    "line": 15
+                }
+            ],
+            "methods": [
+                {
+                    "name": "buildFailureDriverMap",
+                    "args": [
+                        {
+                            "name": "report",
+                            "type": "Map<string | FailureDeliveryData>",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        },
+                        {
+                            "name": "key",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 133,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "report",
+                            "type": "Map<string | FailureDeliveryData>",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        },
+                        {
+                            "name": "key",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "buildNeighborhoodDriverMap",
+                    "args": [
+                        {
+                            "name": "report",
+                            "type": "Map<string | NeighborhoodDeliveryData>",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        },
+                        {
+                            "name": "key",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 140,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "report",
+                            "type": "Map<string | NeighborhoodDeliveryData>",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        },
+                        {
+                            "name": "key",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "buildSuccessDriverMap",
+                    "args": [
+                        {
+                            "name": "report",
+                            "type": "Map<string | SuccessDeliveryData>",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        },
+                        {
+                            "name": "key",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 125,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "report",
+                            "type": "Map<string | SuccessDeliveryData>",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        },
+                        {
+                            "name": "key",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "fillFailureDeliveriesReport",
+                    "args": [
+                        {
+                            "name": "data",
+                            "type": "Delivery[]",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 54,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "data",
+                            "type": "Delivery[]",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "fillNeighborhoodDeliveriesReport",
+                    "args": [
+                        {
+                            "name": "data",
+                            "type": "Delivery[]",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 72,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "data",
+                            "type": "Delivery[]",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "fillReportData",
+                    "args": [
+                        {
+                            "type": "ReportDataConfiguration",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "any",
+                    "typeParameters": [],
+                    "line": 91,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "type": "ReportDataConfiguration",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "fillSuccessDeliveriesReport",
+                    "args": [
+                        {
+                            "name": "data",
+                            "type": "Delivery[]",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 35,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "data",
+                            "type": "Delivery[]",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "getFailureDeliveriesData",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "FailureDeliveryData[]",
+                    "typeParameters": [],
+                    "line": 113,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "getNeighborhoodDeliveriesData",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "NeighborhoodDeliveryData[]",
+                    "typeParameters": [],
+                    "line": 117,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "getSuccessDeliveriesData",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "SuccessDeliveryData[]",
+                    "typeParameters": [],
+                    "line": 121,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "loadAllReports",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "any",
+                    "typeParameters": [],
+                    "line": 19,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "resolvePath",
+                    "args": [
+                        {
+                            "name": "object",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        },
+                        {
+                            "name": "path",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        },
+                        {
+                            "name": "defaultValue",
+                            "type": "",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "any",
+                    "typeParameters": [],
+                    "line": 148,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "object",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        },
+                        {
+                            "name": "path",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        },
+                        {
+                            "name": "defaultValue",
+                            "type": "",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "description": "",
+            "rawdescription": "\n",
+            "sourceCode": "import { Injectable } from '@angular/core';\nimport { SuccessDeliveryData } from '../types/SuccessDeliveryData';\nimport { FailureDeliveryData } from '../types/FailureDeliveryData';\nimport { NeighborhoodDeliveryData } from '../types/NeighborhoodDeliveryData';\nimport { DeliveryService } from '@src/app/deliveries/services/delivery.service';\nimport { Delivery } from '@src/app/deliveries/types/Delivery';\nimport { Observable } from 'rxjs';\nimport { ReportDataConfiguration } from '../types/ReportDataConfiguration';\nimport { ReportType } from '../enums/ReportType';\n\n@Injectable({\n  providedIn: 'root'\n})\nexport class DashboardService {\n  reports: Map<string, (SuccessDeliveryData | FailureDeliveryData | NeighborhoodDeliveryData)[]> = new Map();\n\n  constructor(private deliveryService: DeliveryService) { }\n\n  loadAllReports() {\n    return new Observable(observe => {\n      this.deliveryService.getAllDeliveries().subscribe({\n        next: (data) => {\n          this.fillSuccessDeliveriesReport(data);\n          this.fillFailureDeliveriesReport(data);\n          this.fillNeighborhoodDeliveriesReport(data);\n          observe.next(true);\n          observe.complete();\n        }, error: (err) => {\n          console.error(err);\n        }\n      })\n    })\n  }\n\n  fillSuccessDeliveriesReport(data: Delivery[]) {\n    const mapDeliveryStatusToReportField = {\n      'ENTREGUE': 'deliveriesDone',\n      'PENDENTE': 'deliveriesInProgress'\n    }\n\n    const configuration: ReportDataConfiguration = {\n      data,\n      mapBuilder: this.buildSuccessDriverMap,\n      report: new Map<string, SuccessDeliveryData>(),\n      mapDeliveryStatusToReportField,\n      keys: ['motorista.nome']\n    }\n\n    const report = this.fillReportData(configuration);\n\n    this.reports.set(ReportType.SUCCESS_DELIVERY, report);\n  }\n\n  fillFailureDeliveriesReport(data: Delivery[]) {\n    const mapDeliveryStatusToReportField = {\n      'INSUCESSO': 'deliveriesFailured',\n    }\n\n    const configuration: ReportDataConfiguration = {\n      data,\n      mapBuilder: this.buildFailureDriverMap,\n      report: new Map<string, FailureDeliveryData>(),\n      mapDeliveryStatusToReportField,\n      keys: ['motorista.nome']\n    }\n\n    const report = this.fillReportData(configuration);\n\n    this.reports.set(ReportType.FAILURE_DELIVERY, report);\n  }\n\n  fillNeighborhoodDeliveriesReport(data: Delivery[]) {\n    const mapDeliveryStatusToReportField = {\n      'ENTREGUE': 'totalDeliveriesDone'\n    }\n\n    const configuration: ReportDataConfiguration = {\n      data,\n      mapBuilder: this.buildNeighborhoodDriverMap,\n      report: new Map<string, NeighborhoodDeliveryData>(),\n      mapDeliveryStatusToReportField,\n      keys: ['cliente_destino.bairro', 'cliente_origem.bairro'],\n      totalKey: 'totalDeliveries'\n    }\n\n    const report = this.fillReportData(configuration);\n\n    this.reports.set(ReportType.NEIGHBORHOOD_DELIVERY, report);\n  }\n\n  fillReportData({\n    data, \n    mapBuilder, \n    report,\n    mapDeliveryStatusToReportField,\n    keys,\n    totalKey = ''\n  }: ReportDataConfiguration) {\n    data.forEach(item => {\n      keys.forEach(key => {\n        !report.has(this.resolvePath(item, key, {})) && mapBuilder(report, this.resolvePath(item, key, {}));\n        const mappedData = report.get(this.resolvePath(item, key, {}))!;\n        const status: string | undefined = mapDeliveryStatusToReportField[item.status_entrega]\n        status && mappedData[status as keyof typeof mappedData]++;\n        totalKey && mappedData[totalKey as keyof typeof mappedData]++;\n        report.set(this.resolvePath(item, key, {}), mappedData!);\n      })\n    });\n\n    return Array.from(report.values());\n  }\n\n  getFailureDeliveriesData(): FailureDeliveryData[] {\n    return this.reports.get(ReportType.FAILURE_DELIVERY) as FailureDeliveryData[];\n  }\n\n  getNeighborhoodDeliveriesData(): NeighborhoodDeliveryData[] {\n    return this.reports.get(ReportType.NEIGHBORHOOD_DELIVERY) as NeighborhoodDeliveryData[];\n  }\n\n  getSuccessDeliveriesData(): SuccessDeliveryData[] {\n    return this.reports.get(ReportType.SUCCESS_DELIVERY) as SuccessDeliveryData[];\n  }\n\n  buildSuccessDriverMap(report: Map<string, SuccessDeliveryData>, key: string) {\n    report.set(key, {\n      deliveriesDone: 0,\n      deliveriesInProgress: 0,\n      driverName: key\n    });\n  }\n\n  buildFailureDriverMap(report: Map<string, FailureDeliveryData>, key: string) {\n    report.set(key, {\n      deliveriesFailured: 0,\n      driverName: key\n    });\n  }\n\n  buildNeighborhoodDriverMap(report: Map<string, NeighborhoodDeliveryData>, key: string) {\n    report.set(key, {\n      totalDeliveries: 0,\n      totalDeliveriesDone: 0,\n      neighborhood: key\n    });\n  }\n\n  resolvePath(object: any, path: string, defaultValue: unknown) {\n    return path\n      .split('.')\n      .reduce((o: any, p: string) => o ? o[p] : defaultValue, object)\n  }\n}\n",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "deliveryService",
+                        "type": "DeliveryService",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 15,
+                "jsdoctags": [
+                    {
+                        "name": "deliveryService",
+                        "type": "DeliveryService",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "extends": [],
+            "type": "injectable"
+        },
+        {
+            "name": "DeliveryService",
+            "id": "injectable-DeliveryService-248622461bf6d6bbffdff5367b8b357b95bccdc22066ea0736df765719b31847b683849eff51b428d2b923ca1bcf7af3140705242d771db3123744b109405f8b",
+            "file": "src/app/deliveries/services/delivery.service.ts",
+            "properties": [],
+            "methods": [
+                {
+                    "name": "getAllDeliveries",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "Observable<Delivery[]>",
+                    "typeParameters": [],
+                    "line": 14,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "getDeliveries",
+                    "args": [
+                        {
+                            "type": "DeliveryFilterConfiguration",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "Observable<HttpResponse<Delivery[]>>",
+                    "typeParameters": [],
+                    "line": 18,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "type": "DeliveryFilterConfiguration",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "description": "",
+            "rawdescription": "\n",
+            "sourceCode": "import { HttpClient, HttpResponse } from '@angular/common/http';\nimport { Injectable } from '@angular/core';\nimport { Observable } from 'rxjs';\nimport { Delivery } from '../types/Delivery';\nimport { Status } from '../types/Status';\nimport { DeliveryFilterConfiguration } from '../types/DeliveryFilterConfiguration';\n\n@Injectable({\n  providedIn: 'root'\n})\nexport class DeliveryService {\n  constructor(private http: HttpClient) { }\n\n  getAllDeliveries(): Observable<Delivery[]> {\n    return this.http.get<Delivery[]>('/deliveries');\n  }\n\n  getDeliveries({ name, status, page, pageSize }: DeliveryFilterConfiguration): Observable<HttpResponse<Delivery[]>> {\n    return this.http.get<Delivery[]>('/deliveries', { params: { name, status, page, pageSize }, observe: 'response' })\n  }\n}\n",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "http",
+                        "type": "HttpClient",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 11,
+                "jsdoctags": [
+                    {
+                        "name": "http",
+                        "type": "HttpClient",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "extends": [],
+            "type": "injectable"
+        },
+        {
+            "name": "SidenavService",
+            "id": "injectable-SidenavService-84441308d2b89136712fb2be9496ad3f38e777019a13e6fae249ce87fa464bfb986c6e1b999746dbf093caf9d77cb6904eafd072e03e6a1719447a233c0fb8b4",
+            "file": "src/app/components/sidenav/services/sidenav.service.ts",
+            "properties": [
+                {
+                    "name": "_sidenavOpened$",
+                    "defaultValue": "new BehaviorSubject<boolean>(false)",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 9,
+                    "modifierKind": [
+                        123
+                    ]
+                }
+            ],
+            "methods": [
+                {
+                    "name": "getSidenavOpenAction",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "BehaviorSubject<boolean>",
+                    "typeParameters": [],
+                    "line": 17,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "toggleSidenav",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 13,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "description": "",
+            "rawdescription": "\n",
+            "sourceCode": "import { HttpClient } from '@angular/common/http';\nimport { Injectable } from '@angular/core';\nimport { BehaviorSubject, Observable, of } from 'rxjs';\n\n@Injectable({\n  providedIn: 'root'\n})\nexport class SidenavService {\n  private _sidenavOpened$ = new BehaviorSubject<boolean>(false);\n\n  constructor(private http: HttpClient) { }\n\n  toggleSidenav() {\n    this._sidenavOpened$.next(!this._sidenavOpened$.value);\n  }\n\n  getSidenavOpenAction(): BehaviorSubject<boolean> {\n    return this._sidenavOpened$;\n  }\n}\n",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "http",
+                        "type": "HttpClient",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 9,
+                "jsdoctags": [
+                    {
+                        "name": "http",
+                        "type": "HttpClient",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "extends": [],
+            "type": "injectable"
+        }
+    ],
     "guards": [],
     "interceptors": [],
     "classes": [],
@@ -9,7 +551,7 @@
     "components": [
         {
             "name": "AppComponent",
-            "id": "component-AppComponent-a0bc2d17ee941d2a37dbf9054fbc0ccf4073edd91c189cbe3b9e4b0b6772d316969951eabb7d0b8e4403a27baec3a1d1f81268ba667df5389e6fe53c98425b69",
+            "id": "component-AppComponent-dc25383440a0aef92d19c079f5f2b30f57542c63aa150516f74578f0b70f200254e9af1edc5548ac62264e06d2cc77cd5c020dea750f79e556aceb1f53dd89ea",
             "file": "src/app/app.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -35,7 +577,7 @@
                     "type": "string",
                     "optional": false,
                     "description": "",
-                    "line": 13
+                    "line": 14
                 }
             ],
             "methodsClass": [],
@@ -46,62 +588,111 @@
             "standalone": true,
             "imports": [
                 {
-                    "name": "RouterOutlet"
+                    "name": "ToolbarComponent",
+                    "type": "component"
                 },
                 {
-                    "name": "HelloComponent",
+                    "name": "SidenavComponent",
+                    "type": "component"
+                },
+                {
+                    "name": "FooterComponent",
                     "type": "component"
                 }
             ],
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\nimport { RouterOutlet } from '@angular/router';\nimport { HelloComponent } from './hello/hello.component';\n\n@Component({\n  selector: 'app-root',\n  standalone: true,\n  imports: [RouterOutlet, HelloComponent],\n  templateUrl: './app.component.html',\n  styleUrl: './app.component.scss'\n})\nexport class AppComponent {\n  title = 'delivery-test';\n}\n",
+            "sourceCode": "import { Component } from '@angular/core';\nimport { ToolbarComponent } from \"./components/toolbar/toolbar.component\";\nimport { SidenavComponent } from \"./components/sidenav/sidenav.component\";\nimport { FooterComponent } from \"./footer/footer.component\";\n\n@Component({\n  selector: 'app-root',\n  standalone: true,\n  imports: [ToolbarComponent, SidenavComponent, FooterComponent],\n  templateUrl: './app.component.html',\n  styleUrl: './app.component.scss'\n})\nexport class AppComponent {\n  title = 'delivery-test';\n}\n",
             "styleUrl": "./app.component.scss",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
             "extends": [],
-            "templateData": "<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->\n<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->\n<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->\n<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * -->\n<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->\n<!-- * * * * * * * * * Delete the template below * * * * * * * * * -->\n<!-- * * * * * * * to get started with your project! * * * * * * * -->\n<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->\n\n<style>\n  :host {\n    --bright-blue: oklch(51.01% 0.274 263.83);\n    --electric-violet: oklch(53.18% 0.28 296.97);\n    --french-violet: oklch(47.66% 0.246 305.88);\n    --vivid-pink: oklch(69.02% 0.277 332.77);\n    --hot-red: oklch(61.42% 0.238 15.34);\n    --orange-red: oklch(63.32% 0.24 31.68);\n\n    --gray-900: oklch(19.37% 0.006 300.98);\n    --gray-700: oklch(36.98% 0.014 302.71);\n    --gray-400: oklch(70.9% 0.015 304.04);\n\n    --red-to-pink-to-purple-vertical-gradient: linear-gradient(\n      180deg,\n      var(--orange-red) 0%,\n      var(--vivid-pink) 50%,\n      var(--electric-violet) 100%\n    );\n\n    --red-to-pink-to-purple-horizontal-gradient: linear-gradient(\n      90deg,\n      var(--orange-red) 0%,\n      var(--vivid-pink) 50%,\n      var(--electric-violet) 100%\n    );\n\n    --pill-accent: var(--bright-blue);\n\n    font-family: \"Inter\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto,\n      Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\",\n      \"Segoe UI Symbol\";\n    box-sizing: border-box;\n    -webkit-font-smoothing: antialiased;\n    -moz-osx-font-smoothing: grayscale;\n  }\n\n  h1 {\n    font-size: 3.125rem;\n    color: var(--gray-900);\n    font-weight: 500;\n    line-height: 100%;\n    letter-spacing: -0.125rem;\n    margin: 0;\n    font-family: \"Inter Tight\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto,\n      Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\",\n      \"Segoe UI Symbol\";\n  }\n\n  p {\n    margin: 0;\n    color: var(--gray-700);\n  }\n\n  main {\n    width: 100%;\n    min-height: 100%;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: 1rem;\n    box-sizing: inherit;\n    position: relative;\n  }\n\n  .angular-logo {\n    max-width: 9.2rem;\n  }\n\n  .content {\n    display: flex;\n    justify-content: space-around;\n    width: 100%;\n    max-width: 700px;\n    margin-bottom: 3rem;\n  }\n\n  .content h1 {\n    margin-top: 1.75rem;\n  }\n\n  .content p {\n    margin-top: 1.5rem;\n  }\n\n  .divider {\n    width: 1px;\n    background: var(--red-to-pink-to-purple-vertical-gradient);\n    margin-inline: 0.5rem;\n  }\n\n  .pill-group {\n    display: flex;\n    flex-direction: column;\n    align-items: start;\n    flex-wrap: wrap;\n    gap: 1.25rem;\n  }\n\n  .pill {\n    display: flex;\n    align-items: center;\n    --pill-accent: var(--bright-blue);\n    background: color-mix(in srgb, var(--pill-accent) 5%, transparent);\n    color: var(--pill-accent);\n    padding-inline: 0.75rem;\n    padding-block: 0.375rem;\n    border-radius: 2.75rem;\n    border: 0;\n    transition: background 0.3s ease;\n    font-family: var(--inter-font);\n    font-size: 0.875rem;\n    font-style: normal;\n    font-weight: 500;\n    line-height: 1.4rem;\n    letter-spacing: -0.00875rem;\n    text-decoration: none;\n  }\n\n  .pill:hover {\n    background: color-mix(in srgb, var(--pill-accent) 15%, transparent);\n  }\n\n  .pill-group .pill:nth-child(6n + 1) {\n    --pill-accent: var(--bright-blue);\n  }\n  .pill-group .pill:nth-child(6n + 2) {\n    --pill-accent: var(--french-violet);\n  }\n  .pill-group .pill:nth-child(6n + 3),\n  .pill-group .pill:nth-child(6n + 4),\n  .pill-group .pill:nth-child(6n + 5) {\n    --pill-accent: var(--hot-red);\n  }\n\n  .pill-group svg {\n    margin-inline-start: 0.25rem;\n  }\n\n  .social-links {\n    display: flex;\n    align-items: center;\n    gap: 0.73rem;\n    margin-top: 1.5rem;\n  }\n\n  .social-links path {\n    transition: fill 0.3s ease;\n    fill: var(--gray-400);\n  }\n\n  .social-links a:hover svg path {\n    fill: var(--gray-900);\n  }\n\n  @media screen and (max-width: 650px) {\n    .content {\n      flex-direction: column;\n      width: max-content;\n    }\n\n    .divider {\n      height: 1px;\n      width: 100%;\n      background: var(--red-to-pink-to-purple-horizontal-gradient);\n      margin-block: 1.5rem;\n    }\n  }\n</style>\n\n<main class=\"main\">\n  <div class=\"content\">\n    <div class=\"left-side\">\n      <svg\n        xmlns=\"http://www.w3.org/2000/svg\"\n        viewBox=\"0 0 982 239\"\n        fill=\"none\"\n        class=\"angular-logo\"\n      >\n        <g clip-path=\"url(#a)\">\n          <path\n            fill=\"url(#b)\"\n            d=\"M388.676 191.625h30.849L363.31 31.828h-35.758l-56.215 159.797h30.848l13.174-39.356h60.061l13.256 39.356Zm-65.461-62.675 21.602-64.311h1.227l21.602 64.311h-44.431Zm126.831-7.527v70.202h-28.23V71.839h27.002v20.374h1.392c2.782-6.71 7.2-12.028 13.255-15.956 6.056-3.927 13.584-5.89 22.503-5.89 8.264 0 15.465 1.8 21.684 5.318 6.137 3.518 10.964 8.673 14.319 15.382 3.437 6.71 5.074 14.81 4.992 24.383v76.175h-28.23v-71.92c0-8.019-2.046-14.237-6.219-18.819-4.173-4.5-9.819-6.791-17.102-6.791-4.91 0-9.328 1.063-13.174 3.272-3.846 2.128-6.792 5.237-9.001 9.328-2.046 4.009-3.191 8.918-3.191 14.728ZM589.233 239c-10.147 0-18.82-1.391-26.103-4.091-7.282-2.7-13.092-6.382-17.511-10.964-4.418-4.582-7.528-9.655-9.164-15.219l25.448-6.136c1.145 2.372 2.782 4.663 4.991 6.954 2.209 2.291 5.155 4.255 8.837 5.81 3.683 1.554 8.428 2.291 14.074 2.291 8.019 0 14.647-1.964 19.884-5.81 5.237-3.845 7.856-10.227 7.856-19.064v-22.665h-1.391c-1.473 2.946-3.601 5.892-6.383 9.001-2.782 3.109-6.464 5.645-10.965 7.691-4.582 2.046-10.228 3.109-17.101 3.109-9.165 0-17.511-2.209-25.039-6.545-7.446-4.337-13.42-10.883-17.757-19.474-4.418-8.673-6.628-19.473-6.628-32.565 0-13.091 2.21-24.301 6.628-33.383 4.419-9.082 10.311-15.955 17.839-20.7 7.528-4.746 15.874-7.037 25.039-7.037 7.037 0 12.846 1.145 17.347 3.518 4.582 2.373 8.182 5.236 10.883 8.51 2.7 3.272 4.746 6.382 6.137 9.327h1.554v-19.8h27.821v121.749c0 10.228-2.454 18.737-7.364 25.447-4.91 6.709-11.538 11.7-20.048 15.055-8.509 3.355-18.165 4.991-28.884 4.991Zm.245-71.266c5.974 0 11.047-1.473 15.302-4.337 4.173-2.945 7.446-7.118 9.573-12.519 2.21-5.482 3.274-12.027 3.274-19.637 0-7.609-1.064-14.155-3.274-19.8-2.127-5.646-5.318-10.064-9.491-13.255-4.174-3.11-9.329-4.746-15.384-4.746s-11.537 1.636-15.792 4.91c-4.173 3.272-7.365 7.772-9.492 13.418-2.128 5.727-3.191 12.191-3.191 19.392 0 7.2 1.063 13.745 3.273 19.228 2.127 5.482 5.318 9.736 9.573 12.764 4.174 3.027 9.41 4.582 15.629 4.582Zm141.56-26.51V71.839h28.23v119.786h-27.412v-21.273h-1.227c-2.7 6.709-7.119 12.191-13.338 16.446-6.137 4.255-13.747 6.382-22.748 6.382-7.855 0-14.81-1.718-20.783-5.237-5.974-3.518-10.72-8.591-14.075-15.382-3.355-6.709-5.073-14.891-5.073-24.464V71.839h28.312v71.921c0 7.609 2.046 13.664 6.219 18.083 4.173 4.5 9.655 6.709 16.365 6.709 4.173 0 8.183-.982 12.111-3.028 3.927-2.045 7.118-5.072 9.655-9.082 2.537-4.091 3.764-9.164 3.764-15.218Zm65.707-109.395v159.796h-28.23V31.828h28.23Zm44.841 162.169c-7.61 0-14.402-1.391-20.457-4.091-6.055-2.7-10.883-6.791-14.32-12.109-3.518-5.319-5.237-11.946-5.237-19.801 0-6.791 1.228-12.355 3.765-16.773 2.536-4.419 5.891-7.937 10.228-10.637 4.337-2.618 9.164-4.664 14.647-6.055 5.4-1.391 11.046-2.373 16.856-3.027 7.037-.737 12.683-1.391 17.102-1.964 4.337-.573 7.528-1.555 9.574-2.782 1.963-1.309 3.027-3.273 3.027-5.973v-.491c0-5.891-1.718-10.391-5.237-13.664-3.518-3.191-8.51-4.828-15.056-4.828-6.955 0-12.356 1.473-16.447 4.5-4.009 3.028-6.71 6.546-8.183 10.719l-26.348-3.764c2.046-7.282 5.483-13.336 10.31-18.328 4.746-4.909 10.638-8.59 17.511-11.045 6.955-2.455 14.565-3.682 22.912-3.682 5.809 0 11.537.654 17.265 2.045s10.965 3.6 15.711 6.71c4.746 3.109 8.51 7.282 11.455 12.6 2.864 5.318 4.337 11.946 4.337 19.883v80.184h-27.166v-16.446h-.9c-1.719 3.355-4.092 6.464-7.201 9.328-3.109 2.864-6.955 5.237-11.619 6.955-4.828 1.718-10.229 2.536-16.529 2.536Zm7.364-20.701c5.646 0 10.556-1.145 14.729-3.354 4.173-2.291 7.364-5.237 9.655-9.001 2.292-3.763 3.355-7.854 3.355-12.273v-14.155c-.9.737-2.373 1.391-4.5 2.046-2.128.654-4.419 1.145-7.037 1.636-2.619.491-5.155.9-7.692 1.227-2.537.328-4.746.655-6.628.901-4.173.572-8.019 1.472-11.292 2.781-3.355 1.31-5.973 3.11-7.855 5.401-1.964 2.291-2.864 5.318-2.864 8.918 0 5.237 1.882 9.164 5.728 11.782 3.682 2.782 8.51 4.091 14.401 4.091Zm64.643 18.328V71.839h27.412v19.965h1.227c2.21-6.955 5.974-12.274 11.292-16.038 5.319-3.763 11.456-5.645 18.329-5.645 1.555 0 3.355.082 5.237.163 1.964.164 3.601.328 4.91.573v25.938c-1.227-.41-3.109-.819-5.646-1.146a58.814 58.814 0 0 0-7.446-.49c-5.155 0-9.738 1.145-13.829 3.354-4.091 2.209-7.282 5.236-9.655 9.164-2.373 3.927-3.519 8.427-3.519 13.5v70.448h-28.312ZM222.077 39.192l-8.019 125.923L137.387 0l84.69 39.192Zm-53.105 162.825-57.933 33.056-57.934-33.056 11.783-28.556h92.301l11.783 28.556ZM111.039 62.675l30.357 73.803H80.681l30.358-73.803ZM7.937 165.115 0 39.192 84.69 0 7.937 165.115Z\"\n          />\n          <path\n            fill=\"url(#c)\"\n            d=\"M388.676 191.625h30.849L363.31 31.828h-35.758l-56.215 159.797h30.848l13.174-39.356h60.061l13.256 39.356Zm-65.461-62.675 21.602-64.311h1.227l21.602 64.311h-44.431Zm126.831-7.527v70.202h-28.23V71.839h27.002v20.374h1.392c2.782-6.71 7.2-12.028 13.255-15.956 6.056-3.927 13.584-5.89 22.503-5.89 8.264 0 15.465 1.8 21.684 5.318 6.137 3.518 10.964 8.673 14.319 15.382 3.437 6.71 5.074 14.81 4.992 24.383v76.175h-28.23v-71.92c0-8.019-2.046-14.237-6.219-18.819-4.173-4.5-9.819-6.791-17.102-6.791-4.91 0-9.328 1.063-13.174 3.272-3.846 2.128-6.792 5.237-9.001 9.328-2.046 4.009-3.191 8.918-3.191 14.728ZM589.233 239c-10.147 0-18.82-1.391-26.103-4.091-7.282-2.7-13.092-6.382-17.511-10.964-4.418-4.582-7.528-9.655-9.164-15.219l25.448-6.136c1.145 2.372 2.782 4.663 4.991 6.954 2.209 2.291 5.155 4.255 8.837 5.81 3.683 1.554 8.428 2.291 14.074 2.291 8.019 0 14.647-1.964 19.884-5.81 5.237-3.845 7.856-10.227 7.856-19.064v-22.665h-1.391c-1.473 2.946-3.601 5.892-6.383 9.001-2.782 3.109-6.464 5.645-10.965 7.691-4.582 2.046-10.228 3.109-17.101 3.109-9.165 0-17.511-2.209-25.039-6.545-7.446-4.337-13.42-10.883-17.757-19.474-4.418-8.673-6.628-19.473-6.628-32.565 0-13.091 2.21-24.301 6.628-33.383 4.419-9.082 10.311-15.955 17.839-20.7 7.528-4.746 15.874-7.037 25.039-7.037 7.037 0 12.846 1.145 17.347 3.518 4.582 2.373 8.182 5.236 10.883 8.51 2.7 3.272 4.746 6.382 6.137 9.327h1.554v-19.8h27.821v121.749c0 10.228-2.454 18.737-7.364 25.447-4.91 6.709-11.538 11.7-20.048 15.055-8.509 3.355-18.165 4.991-28.884 4.991Zm.245-71.266c5.974 0 11.047-1.473 15.302-4.337 4.173-2.945 7.446-7.118 9.573-12.519 2.21-5.482 3.274-12.027 3.274-19.637 0-7.609-1.064-14.155-3.274-19.8-2.127-5.646-5.318-10.064-9.491-13.255-4.174-3.11-9.329-4.746-15.384-4.746s-11.537 1.636-15.792 4.91c-4.173 3.272-7.365 7.772-9.492 13.418-2.128 5.727-3.191 12.191-3.191 19.392 0 7.2 1.063 13.745 3.273 19.228 2.127 5.482 5.318 9.736 9.573 12.764 4.174 3.027 9.41 4.582 15.629 4.582Zm141.56-26.51V71.839h28.23v119.786h-27.412v-21.273h-1.227c-2.7 6.709-7.119 12.191-13.338 16.446-6.137 4.255-13.747 6.382-22.748 6.382-7.855 0-14.81-1.718-20.783-5.237-5.974-3.518-10.72-8.591-14.075-15.382-3.355-6.709-5.073-14.891-5.073-24.464V71.839h28.312v71.921c0 7.609 2.046 13.664 6.219 18.083 4.173 4.5 9.655 6.709 16.365 6.709 4.173 0 8.183-.982 12.111-3.028 3.927-2.045 7.118-5.072 9.655-9.082 2.537-4.091 3.764-9.164 3.764-15.218Zm65.707-109.395v159.796h-28.23V31.828h28.23Zm44.841 162.169c-7.61 0-14.402-1.391-20.457-4.091-6.055-2.7-10.883-6.791-14.32-12.109-3.518-5.319-5.237-11.946-5.237-19.801 0-6.791 1.228-12.355 3.765-16.773 2.536-4.419 5.891-7.937 10.228-10.637 4.337-2.618 9.164-4.664 14.647-6.055 5.4-1.391 11.046-2.373 16.856-3.027 7.037-.737 12.683-1.391 17.102-1.964 4.337-.573 7.528-1.555 9.574-2.782 1.963-1.309 3.027-3.273 3.027-5.973v-.491c0-5.891-1.718-10.391-5.237-13.664-3.518-3.191-8.51-4.828-15.056-4.828-6.955 0-12.356 1.473-16.447 4.5-4.009 3.028-6.71 6.546-8.183 10.719l-26.348-3.764c2.046-7.282 5.483-13.336 10.31-18.328 4.746-4.909 10.638-8.59 17.511-11.045 6.955-2.455 14.565-3.682 22.912-3.682 5.809 0 11.537.654 17.265 2.045s10.965 3.6 15.711 6.71c4.746 3.109 8.51 7.282 11.455 12.6 2.864 5.318 4.337 11.946 4.337 19.883v80.184h-27.166v-16.446h-.9c-1.719 3.355-4.092 6.464-7.201 9.328-3.109 2.864-6.955 5.237-11.619 6.955-4.828 1.718-10.229 2.536-16.529 2.536Zm7.364-20.701c5.646 0 10.556-1.145 14.729-3.354 4.173-2.291 7.364-5.237 9.655-9.001 2.292-3.763 3.355-7.854 3.355-12.273v-14.155c-.9.737-2.373 1.391-4.5 2.046-2.128.654-4.419 1.145-7.037 1.636-2.619.491-5.155.9-7.692 1.227-2.537.328-4.746.655-6.628.901-4.173.572-8.019 1.472-11.292 2.781-3.355 1.31-5.973 3.11-7.855 5.401-1.964 2.291-2.864 5.318-2.864 8.918 0 5.237 1.882 9.164 5.728 11.782 3.682 2.782 8.51 4.091 14.401 4.091Zm64.643 18.328V71.839h27.412v19.965h1.227c2.21-6.955 5.974-12.274 11.292-16.038 5.319-3.763 11.456-5.645 18.329-5.645 1.555 0 3.355.082 5.237.163 1.964.164 3.601.328 4.91.573v25.938c-1.227-.41-3.109-.819-5.646-1.146a58.814 58.814 0 0 0-7.446-.49c-5.155 0-9.738 1.145-13.829 3.354-4.091 2.209-7.282 5.236-9.655 9.164-2.373 3.927-3.519 8.427-3.519 13.5v70.448h-28.312ZM222.077 39.192l-8.019 125.923L137.387 0l84.69 39.192Zm-53.105 162.825-57.933 33.056-57.934-33.056 11.783-28.556h92.301l11.783 28.556ZM111.039 62.675l30.357 73.803H80.681l30.358-73.803ZM7.937 165.115 0 39.192 84.69 0 7.937 165.115Z\"\n          />\n        </g>\n        <defs>\n          <radialGradient\n            id=\"c\"\n            cx=\"0\"\n            cy=\"0\"\n            r=\"1\"\n            gradientTransform=\"rotate(118.122 171.182 60.81) scale(205.794)\"\n            gradientUnits=\"userSpaceOnUse\"\n          >\n            <stop stop-color=\"#FF41F8\" />\n            <stop offset=\".707\" stop-color=\"#FF41F8\" stop-opacity=\".5\" />\n            <stop offset=\"1\" stop-color=\"#FF41F8\" stop-opacity=\"0\" />\n          </radialGradient>\n          <linearGradient\n            id=\"b\"\n            x1=\"0\"\n            x2=\"982\"\n            y1=\"192\"\n            y2=\"192\"\n            gradientUnits=\"userSpaceOnUse\"\n          >\n            <stop stop-color=\"#F0060B\" />\n            <stop offset=\"0\" stop-color=\"#F0070C\" />\n            <stop offset=\".526\" stop-color=\"#CC26D5\" />\n            <stop offset=\"1\" stop-color=\"#7702FF\" />\n          </linearGradient>\n          <clipPath id=\"a\"><path fill=\"#fff\" d=\"M0 0h982v239H0z\" /></clipPath>\n        </defs>\n      </svg>\n      <h1>Hello, {{ title }}</h1>\n      <p>Congratulations! Your app is running. 🎉</p>\n      <app-hello></app-hello>\n    </div>\n    <div class=\"divider\" role=\"separator\" aria-label=\"Divider\"></div>\n    <div class=\"right-side\">\n      <div class=\"pill-group\">\n        @for (item of [\n          { title: 'Explore the Docs', link: 'https://angular.dev' },\n          { title: 'Learn with Tutorials', link: 'https://angular.dev/tutorials' },\n          { title: 'CLI Docs', link: 'https://angular.dev/tools/cli' },\n          { title: 'Angular Language Service', link: 'https://angular.dev/tools/language-service' },\n          { title: 'Angular DevTools', link: 'https://angular.dev/tools/devtools' },\n        ]; track item.title) {\n          <a\n            class=\"pill\"\n            [href]=\"item.link\"\n            target=\"_blank\"\n            rel=\"noopener\"\n          >\n            <span>{{ item.title }}</span>\n            <svg\n              xmlns=\"http://www.w3.org/2000/svg\"\n              height=\"14\"\n              viewBox=\"0 -960 960 960\"\n              width=\"14\"\n              fill=\"currentColor\"\n            >\n              <path\n                d=\"M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z\"\n              />\n            </svg>\n          </a>\n        }\n      </div>\n      <div class=\"social-links\">\n        <a\n          href=\"https://github.com/angular/angular\"\n          aria-label=\"Github\"\n          target=\"_blank\"\n          rel=\"noopener\"\n        >\n          <svg\n            width=\"25\"\n            height=\"24\"\n            viewBox=\"0 0 25 24\"\n            fill=\"none\"\n            xmlns=\"http://www.w3.org/2000/svg\"\n            alt=\"Github\"\n          >\n            <path\n              d=\"M12.3047 0C5.50634 0 0 5.50942 0 12.3047C0 17.7423 3.52529 22.3535 8.41332 23.9787C9.02856 24.0946 9.25414 23.7142 9.25414 23.3871C9.25414 23.0949 9.24389 22.3207 9.23876 21.2953C5.81601 22.0377 5.09414 19.6444 5.09414 19.6444C4.53427 18.2243 3.72524 17.8449 3.72524 17.8449C2.61064 17.082 3.81137 17.0973 3.81137 17.0973C5.04697 17.1835 5.69604 18.3647 5.69604 18.3647C6.79321 20.2463 8.57636 19.7029 9.27978 19.3881C9.39052 18.5924 9.70736 18.0499 10.0591 17.7423C7.32641 17.4347 4.45429 16.3765 4.45429 11.6618C4.45429 10.3185 4.9311 9.22133 5.72065 8.36C5.58222 8.04931 5.16694 6.79833 5.82831 5.10337C5.82831 5.10337 6.85883 4.77319 9.2121 6.36459C10.1965 6.09082 11.2424 5.95546 12.2883 5.94931C13.3342 5.95546 14.3801 6.09082 15.3644 6.36459C17.7023 4.77319 18.7328 5.10337 18.7328 5.10337C19.3942 6.79833 18.9789 8.04931 18.8559 8.36C19.6403 9.22133 20.1171 10.3185 20.1171 11.6618C20.1171 16.3888 17.2409 17.4296 14.5031 17.7321C14.9338 18.1012 15.3337 18.8559 15.3337 20.0084C15.3337 21.6552 15.3183 22.978 15.3183 23.3779C15.3183 23.7009 15.5336 24.0854 16.1642 23.9623C21.0871 22.3484 24.6094 17.7341 24.6094 12.3047C24.6094 5.50942 19.0999 0 12.3047 0Z\"\n            />\n          </svg>\n        </a>\n        <a\n          href=\"https://twitter.com/angular\"\n          aria-label=\"Twitter\"\n          target=\"_blank\"\n          rel=\"noopener\"\n        >\n          <svg\n            width=\"24\"\n            height=\"24\"\n            viewBox=\"0 0 24 24\"\n            fill=\"none\"\n            xmlns=\"http://www.w3.org/2000/svg\"\n            alt=\"Twitter\"\n          >\n            <path\n              d=\"M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z\"\n            />\n          </svg>\n        </a>\n        <a\n          href=\"https://www.youtube.com/channel/UCbn1OgGei-DV7aSRo_HaAiw\"\n          aria-label=\"Youtube\"\n          target=\"_blank\"\n          rel=\"noopener\"\n        >\n          <svg\n            width=\"29\"\n            height=\"20\"\n            viewBox=\"0 0 29 20\"\n            fill=\"none\"\n            xmlns=\"http://www.w3.org/2000/svg\"\n            alt=\"Youtube\"\n          >\n            <path\n              fill-rule=\"evenodd\"\n              clip-rule=\"evenodd\"\n              d=\"M27.4896 1.52422C27.9301 1.96749 28.2463 2.51866 28.4068 3.12258C29.0004 5.35161 29.0004 10 29.0004 10C29.0004 10 29.0004 14.6484 28.4068 16.8774C28.2463 17.4813 27.9301 18.0325 27.4896 18.4758C27.0492 18.9191 26.5 19.2389 25.8972 19.4032C23.6778 20 14.8068 20 14.8068 20C14.8068 20 5.93586 20 3.71651 19.4032C3.11363 19.2389 2.56449 18.9191 2.12405 18.4758C1.68361 18.0325 1.36732 17.4813 1.20683 16.8774C0.613281 14.6484 0.613281 10 0.613281 10C0.613281 10 0.613281 5.35161 1.20683 3.12258C1.36732 2.51866 1.68361 1.96749 2.12405 1.52422C2.56449 1.08095 3.11363 0.76113 3.71651 0.596774C5.93586 0 14.8068 0 14.8068 0C14.8068 0 23.6778 0 25.8972 0.596774C26.5 0.76113 27.0492 1.08095 27.4896 1.52422ZM19.3229 10L11.9036 5.77905V14.221L19.3229 10Z\"\n            />\n          </svg>\n        </a>\n      </div>\n    </div>\n  </div>\n</main>\n\n<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->\n<!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->\n<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * * -->\n<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * * -->\n<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->\n<!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->\n<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->\n\n\n<router-outlet />\n"
+            "templateData": "<app-toolbar/>\n<app-sidenav/>\n<app-footer/>\n"
         },
         {
-            "name": "HelloComponent",
-            "id": "component-HelloComponent-adc1a72117f570a4ba7589d752a7e43ec3f0081dadd201ea7163a9f02afb884c311afcd091d2718031a8cd0c7ad5fa3f06311542efa063a0ebf39e25f3961f24",
-            "file": "src/app/hello/hello.component.ts",
+            "name": "DashboardComponent",
+            "id": "component-DashboardComponent-16321fc444b3b6ff49961c3b6021604ebffacbde030422cade24432725e9f85444ff0da1bbe52fc4a7eac0b55cb7bd434c1125228f561999f9a868d25779de39",
+            "file": "src/app/dashboard/dashboard.component.ts",
+            "changeDetection": "ChangeDetectionStrategy.OnPush",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
             "outputs": [],
             "providers": [],
-            "selector": "app-hello",
+            "selector": "app-dashboard",
             "styleUrls": [],
             "styles": [],
             "templateUrl": [
-                "./hello.component.html"
+                "./dashboard.component.html"
             ],
             "viewProviders": [],
             "hostDirectives": [],
-            "inputsClass": [
-                {
-                    "name": "title",
-                    "defaultValue": "'hello works!'",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 13,
-                    "type": "string",
-                    "decorators": []
-                }
-            ],
+            "inputsClass": [],
             "outputsClass": [],
             "propertiesClass": [
                 {
-                    "name": "content",
+                    "name": "failureDeliveriesTableData",
+                    "defaultValue": "signal(undefined)",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "any",
+                    "type": "WritableSignal<literal type | undefined>",
                     "optional": false,
                     "description": "",
-                    "line": 15,
+                    "line": 21,
+                    "modifierKind": [
+                        125
+                    ]
+                },
+                {
+                    "name": "neighborhoodDeliveriesTableData",
+                    "defaultValue": "signal(undefined)",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "WritableSignal<literal type | undefined>",
+                    "optional": false,
+                    "description": "",
+                    "line": 22,
+                    "modifierKind": [
+                        125
+                    ]
+                },
+                {
+                    "name": "resizing",
+                    "defaultValue": "signal(false)",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 23,
+                    "modifierKind": [
+                        125
+                    ]
+                },
+                {
+                    "name": "resizingDebounce",
+                    "defaultValue": "undefined",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ReturnType<> | undefined",
+                    "optional": false,
+                    "description": "",
+                    "line": 24,
+                    "modifierKind": [
+                        125
+                    ]
+                },
+                {
+                    "name": "successDeliveriesTableData",
+                    "defaultValue": "signal(undefined)",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "WritableSignal<literal type | undefined>",
+                    "optional": false,
+                    "description": "",
+                    "line": 20,
                     "modifierKind": [
                         125
                     ]
@@ -109,30 +700,44 @@
             ],
             "methodsClass": [
                 {
-                    "name": "callApi",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "any",
-                    "typeParameters": [],
-                    "line": 33,
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "modifierKind": [
-                        125
-                    ]
-                },
-                {
-                    "name": "getContent",
+                    "name": "loadAllReports",
                     "args": [],
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 27,
+                    "line": 32,
                     "deprecated": false,
-                    "deprecationMessage": "",
-                    "modifierKind": [
-                        125
-                    ]
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "loadFailureDeliveriesDataTable",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 49,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "loadNeighborhoodDeliveriesDataTable",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 58,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "loadSuccessDeliveriesDataTable",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 40,
+                    "deprecated": false,
+                    "deprecationMessage": ""
                 },
                 {
                     "name": "ngOnInit",
@@ -140,22 +745,613 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 19,
+                    "line": 28,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
                 {
-                    "name": "resetTitle",
+                    "name": "onResize",
+                    "args": [
+                        {
+                            "name": "_event",
+                            "type": "UIEvent",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 68,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "_event",
+                            "type": "UIEvent",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "TableDashboardComponent",
+                    "type": "component"
+                },
+                {
+                    "name": "NgxMasonryModule",
+                    "type": "module"
+                },
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { ChangeDetectionStrategy, Component, OnInit, signal, WritableSignal } from '@angular/core';\nimport { DashboardService } from './services/dashboard.service';\nimport { SuccessDeliveryData } from './types/SuccessDeliveryData';\nimport { FailureDeliveryData } from './types/FailureDeliveryData';\nimport { NeighborhoodDeliveryData } from './types/NeighborhoodDeliveryData';\nimport { NgxMasonryModule } from 'ngx-masonry';\nimport { CommonModule } from '@angular/common';\nimport { TableDashboardComponent } from './table/table.component';\n\n@Component({\n  selector: 'app-dashboard',\n  standalone: true,\n  imports: [TableDashboardComponent, NgxMasonryModule, CommonModule],\n  templateUrl: './dashboard.component.html',\n  styleUrl: './dashboard.component.scss',\n  changeDetection: ChangeDetectionStrategy.OnPush,\n})\nexport class DashboardComponent implements OnInit {\n  \n  public successDeliveriesTableData: WritableSignal<{ displayedColumns: string[], sourceData: SuccessDeliveryData[] } | undefined> = signal(undefined);\n  public failureDeliveriesTableData: WritableSignal<{ displayedColumns: string[], sourceData: FailureDeliveryData[] } | undefined> = signal(undefined);\n  public neighborhoodDeliveriesTableData: WritableSignal<{ displayedColumns: string[], sourceData: NeighborhoodDeliveryData[] } | undefined> = signal(undefined);\n  public resizing = signal(false);\n  public resizingDebounce: ReturnType<typeof setTimeout> | undefined = undefined;\n\n  constructor(private dashboardService: DashboardService) {}\n\n  ngOnInit(): void {\n    this.loadAllReports();\n  }\n\n  loadAllReports() {\n    this.dashboardService.loadAllReports().subscribe(() => {\n      this.loadSuccessDeliveriesDataTable();\n      this.loadFailureDeliveriesDataTable();\n      this.loadNeighborhoodDeliveriesDataTable();\n    })\n  }\n\n  loadSuccessDeliveriesDataTable() {\n    const displayedColumns = ['name', 'total-pending', 'total-done'];\n    const sourceData = this.dashboardService.getSuccessDeliveriesData();\n\n    this.successDeliveriesTableData.set({\n      displayedColumns,\n      sourceData\n    })\n  }\n  loadFailureDeliveriesDataTable() {\n    const displayedColumns = ['name', 'total-failured'];\n    const sourceData = this.dashboardService.getFailureDeliveriesData();\n\n    this.failureDeliveriesTableData.set({\n      displayedColumns,\n      sourceData\n    })\n  }\n  loadNeighborhoodDeliveriesDataTable() {\n    const displayedColumns = ['neighborhood', 'total-done', 'total'];\n    const sourceData = this.dashboardService.getNeighborhoodDeliveriesData();\n\n    this.neighborhoodDeliveriesTableData.set({\n      displayedColumns,\n      sourceData\n    })\n  }\n\n  onResize(_event: UIEvent) {\n    clearTimeout(this.resizingDebounce);\n    this.resizing.set(true);\n    this.resizingDebounce = setTimeout(() => {\n      this.resizing.set(false);\n    }, 200);\n  }\n}\n",
+            "styleUrl": "./dashboard.component.scss",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "dashboardService",
+                        "type": "DashboardService",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 24,
+                "jsdoctags": [
+                    {
+                        "name": "dashboardService",
+                        "type": "DashboardService",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "extends": [],
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<div class=\"page-container\">\n  <div class=\"page\">\n    <ngx-masonry (window:resize)=\"onResize($event)\">\n      <div class=\"row\" [ngClass]=\"{'opacity-0': resizing()}\">\n        @if (successDeliveriesTableData()?.sourceData) {\n          <div ngxMasonryItem  class=\"col-lg-6 col-12\">\n            <app-dashboard-table\n              title=\"Andamento de entregas\"\n              subtitle=\"Pedidos que estão em rota de entrega ou finalizados\"\n              [sourceData]=\"successDeliveriesTableData()!.sourceData\"\n              [displayedColumns]=\"successDeliveriesTableData()!.displayedColumns\"\n              [bindDisplayedColumnWithElement]=\"[\n                {def: 'name', elementName: 'driverName', displayColumnName: 'Nome do motorista'}, \n                {def: 'total-pending', elementName: 'deliveriesInProgress', displayColumnName: 'Qtde. Entregas pendentes'}, \n                {def: 'total-done', elementName: 'deliveriesDone', displayColumnName: 'Qtde. Entregas bem sucedidas'}\n              ]\"\n            />\n          </div>\n        }\n    \n        @if (neighborhoodDeliveriesTableData()?.sourceData) {\n          <div ngxMasonryItem  class=\"col-lg-6 col-12\">\n            <app-dashboard-table\n              title=\"Entregas por bairro\"\n              subtitle=\"Pedidos por bairro, seja de origem ou destino\"\n              [sourceData]=\"neighborhoodDeliveriesTableData()!.sourceData\"\n              [displayedColumns]=\"neighborhoodDeliveriesTableData()!.displayedColumns\"\n              [bindDisplayedColumnWithElement]=\"[\n                {def: 'neighborhood', elementName: 'neighborhood', displayColumnName: 'Bairro'}, \n                {def: 'total-done', elementName: 'totalDeliveriesDone', displayColumnName: 'Qtde. Entregas finalizadas'}, \n                {def: 'total', elementName: 'totalDeliveries', displayColumnName: 'Qtde. Total de entregas'}\n              ]\"\n            />\n          </div>\n        }\n    \n        @if (failureDeliveriesTableData()?.sourceData) {\n          <div ngxMasonryItem  class=\"col-lg-6 col-12\">\n            <app-dashboard-table\n              title=\"Entregas mal sucedida\"\n              subtitle=\"Pedidos que tiveram insucesso na entrega\"\n              [sourceData]=\"failureDeliveriesTableData()!.sourceData\"\n              [displayedColumns]=\"failureDeliveriesTableData()!.displayedColumns\"\n              [bindDisplayedColumnWithElement]=\"[\n                {def: 'name', elementName: 'driverName', displayColumnName: 'Nome do motorista'}, \n                {def: 'total-failured', elementName: 'deliveriesFailured', displayColumnName: 'Qtde. Entregas mal sucedidas'}\n              ]\"\n            />\n          </div>\n        }\n      </div>\n    </ngx-masonry>\n  </div>\n</div>\n\n\n\n\n"
+        },
+        {
+            "name": "DeliveriesComponent",
+            "id": "component-DeliveriesComponent-c76acc48bd26a7cc4e01df1514b0e891f84f8623333f7cd7f1a85ed6a84a9e2f477b4f5c0dcc14086247055a249924a4cb5957bf37554df4dd7ebc211ba0d782",
+            "file": "src/app/deliveries/deliveries.component.ts",
+            "changeDetection": "ChangeDetectionStrategy.OnPush",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-deliveries",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./deliveries.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "filters",
+                    "defaultValue": "{\n    name: '',\n    status: '',\n    page: 0,\n    pageSize: 10\n  }",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "DeliveryFilterConfiguration",
+                    "optional": false,
+                    "description": "",
+                    "line": 18
+                },
+                {
+                    "name": "tableData",
+                    "defaultValue": "signal(undefined)",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "WritableSignal<literal type | undefined>",
+                    "optional": false,
+                    "description": "",
+                    "line": 25
+                },
+                {
+                    "name": "tableTotalItems",
+                    "defaultValue": "signal(0)",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 26
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "loadDeliveries",
                     "args": [],
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 23,
+                    "line": 49,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 30,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "updateFilters",
+                    "args": [
+                        {
+                            "name": "filters",
+                            "type": "DeliveryFilterConfiguration",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 34,
                     "deprecated": false,
                     "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "filters",
+                            "type": "DeliveryFilterConfiguration",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "updatePagination",
+                    "args": [
+                        {
+                            "name": "event",
+                            "type": "PageEvent",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 39,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "event",
+                            "type": "PageEvent",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "FilterComponent",
+                    "type": "component"
+                },
+                {
+                    "name": "TableComponent",
+                    "type": "component"
+                },
+                {
+                    "name": "MatPaginatorModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { ChangeDetectionStrategy, Component, EventEmitter, OnInit, signal, WritableSignal } from '@angular/core';\nimport { DeliveryService } from './services/delivery.service';\nimport { DeliveryFilterConfiguration } from './types/DeliveryFilterConfiguration';\nimport { FilterComponent } from './filter/filter.component';\nimport { TableComponent } from '../components/table/table.component';\nimport { DeliveryTableSourceData } from './types/DeliveryTableSourceData';\nimport { MatPaginatorModule, PageEvent } from '@angular/material/paginator';\n\n@Component({\n  selector: 'app-deliveries',\n  standalone: true,\n  imports: [FilterComponent, TableComponent, MatPaginatorModule],\n  templateUrl: './deliveries.component.html',\n  styleUrl: './deliveries.component.scss',\n  changeDetection: ChangeDetectionStrategy.OnPush,\n})\nexport class DeliveriesComponent implements OnInit {\n  filters: DeliveryFilterConfiguration = {\n    name: '',\n    status: '',\n    page: 0,\n    pageSize: 10\n  }\n\n  tableData: WritableSignal<{ sourceData: DeliveryTableSourceData[], displayedColumns: string[] } | undefined> = signal(undefined)\n  tableTotalItems = signal(0);\n\n  constructor(private deliveryService: DeliveryService) {}\n\n  ngOnInit() {\n    this.loadDeliveries();\n  }\n\n  updateFilters(filters: DeliveryFilterConfiguration) {\n    this.filters = filters;\n    this.loadDeliveries();\n  }\n\n  updatePagination(event: PageEvent) {\n    const page = event.pageIndex * 10;\n    const pageSize = page + 10;\n    \n    this.filters.page = page;\n    this.filters.pageSize = pageSize;\n\n    this.loadDeliveries();\n  }\n\n  loadDeliveries() {\n    this.deliveryService.getDeliveries(this.filters).subscribe(res => {\n      if (res.body) {\n        const sourceData: DeliveryTableSourceData[] = res.body.map(item => {\n          return {\n            driver: item.motorista.nome,\n            document: item.documento.toString(),\n            destinyClient: item.cliente_destino.nome,\n            destinyAddress: `${item.cliente_destino.endereco} ${item.cliente_destino.bairro} ${item.cliente_destino.cidade}`,\n            originClient: item.cliente_origem.nome,\n            originAddress: `${item.cliente_origem.endereco} ${item.cliente_origem.bairro} ${item.cliente_origem.cidade}`,\n            status: item.status_entrega\n          }\n        });\n\n        this.tableData.set({\n          sourceData,\n          displayedColumns: ['driver', 'document', 'destiny-client', 'destiny-address', 'origin-client', 'origin-address', 'status']\n        })\n\n        this.tableTotalItems.set(Number(res.headers.get('total-items')));\n      }\n    })\n  }\n}\n",
+            "styleUrl": "./deliveries.component.scss",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "deliveryService",
+                        "type": "DeliveryService",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 26,
+                "jsdoctags": [
+                    {
+                        "name": "deliveryService",
+                        "type": "DeliveryService",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "extends": [],
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<div class=\"page-container\">\n  <div class=\"page\">\n    <section class=\"header\">\n      <h3>Entregas</h3>\n    </section>\n    \n    <section class=\"filters\">\n      <app-deliveries-filter (loadDeliveries)=\"updateFilters($event)\"/>\n    </section>\n    \n    @if (tableData()?.sourceData) {\n      <section class=\"table\">\n        <div class=\"table-container\">\n          <p>Lista de Entregas</p>\n    \n          <app-table \n            [sourceData]=\"tableData()!.sourceData\"\n            [displayedColumns]=\"tableData()!.displayedColumns\"\n            [bindDisplayedColumnWithElement]=\"[\n              {def: 'driver', elementName: 'driver', displayColumnName: 'Motorista'}, \n              {def: 'document', elementName: 'document', displayColumnName: 'N. Documento'}, \n              {def: 'origin-client', elementName: 'originClient', displayColumnName: 'Cliente origem'},\n              {def: 'origin-address', elementName: 'originAddress', displayColumnName: 'Endereço origem'},\n              {def: 'destiny-client', elementName: 'destinyClient', displayColumnName: 'Cliente destino'},\n              {def: 'destiny-address', elementName: 'destinyAddress', displayColumnName: 'Endereço destino'},\n              {def: 'status', elementName: 'status', displayColumnName: 'Status'},\n            ]\"\n          />\n        </div>\n      </section>\n    \n      <section class=\"pagination\">\n        <mat-paginator \n          [length]=\"tableTotalItems()\"\n          [pageSize]=\"10\"\n          (page)=\"updatePagination($event)\"\n          aria-label=\"Select page\" />\n      </section>\n    }\n  </div>\n</div>\n\n"
+        },
+        {
+            "name": "FilterComponent",
+            "id": "component-FilterComponent-451181debaeec57bc2f46e6d4e7ad17e55db062b7aa6f98d542c015a1ac80a64cea81594858390da1a68c5abba0a3eee4cecc82dc4ab983751dbdae898b0c02d",
+            "file": "src/app/deliveries/filter/filter.component.ts",
+            "changeDetection": "ChangeDetectionStrategy.OnPush",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-deliveries-filter",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./filter.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [
+                {
+                    "name": "loadDeliveries",
+                    "defaultValue": "new EventEmitter()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 20,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [
+                {
+                    "name": "filterForm",
+                    "defaultValue": "new FormGroup({\n    name: new FormControl<string>(''),\n    status: new FormControl<Status | ''>(''),\n    page: new FormControl<number>(0),\n    pageSize: new FormControl<number>(10),\n  })",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 24,
                     "modifierKind": [
                         125
                     ]
+                },
+                {
+                    "name": "panelOpenState",
+                    "defaultValue": "signal(false)",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 22,
+                    "modifierKind": [
+                        148
+                    ]
+                },
+                {
+                    "name": "statusOptions",
+                    "defaultValue": "signal(Object.values(Status))",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 23,
+                    "modifierKind": [
+                        125
+                    ]
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "submit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 31,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "MatExpansionModule",
+                    "type": "module"
+                },
+                {
+                    "name": "MatFormFieldModule",
+                    "type": "module"
+                },
+                {
+                    "name": "MatInputModule",
+                    "type": "module"
+                },
+                {
+                    "name": "MatSelectModule",
+                    "type": "module"
+                },
+                {
+                    "name": "MatButtonModule",
+                    "type": "module"
+                },
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                },
+                {
+                    "name": "ReactiveFormsModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { ChangeDetectionStrategy, Component, EventEmitter, Output, signal } from '@angular/core';\nimport { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';\nimport { MatButtonModule } from '@angular/material/button';\nimport { MatExpansionModule } from '@angular/material/expansion';\nimport { MatFormFieldModule } from '@angular/material/form-field';\nimport { MatInputModule } from '@angular/material/input';\nimport { MatSelectModule } from '@angular/material/select';\nimport { Status } from '../types/Status';\n\n@Component({\n  selector: 'app-deliveries-filter',\n  standalone: true,\n  imports: [MatExpansionModule, MatFormFieldModule, MatInputModule, MatSelectModule, MatButtonModule, CommonModule, ReactiveFormsModule],\n  templateUrl: './filter.component.html',\n  styleUrl: './filter.component.scss',\n  changeDetection: ChangeDetectionStrategy.OnPush,\n})\nexport class FilterComponent {\n  @Output() loadDeliveries = new EventEmitter();\n\n  readonly panelOpenState = signal(false);\n  public statusOptions = signal(Object.values(Status));\n  public filterForm = new FormGroup({\n    name: new FormControl<string>(''),\n    status: new FormControl<Status | ''>(''),\n    page: new FormControl<number>(0),\n    pageSize: new FormControl<number>(10),\n  });\n\n  submit() {\n    this.loadDeliveries.emit(this.filterForm.getRawValue());\n  }\n}\n",
+            "styleUrl": "./filter.component.scss",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<div class=\"row\">\n  <div class=\"col-12\">\n    <mat-accordion>\n      <mat-expansion-panel (opened)=\"panelOpenState.set(true)\" (closed)=\"panelOpenState.set(false)\">\n        <mat-expansion-panel-header>\n          <mat-panel-title> Filtros </mat-panel-title>\n        </mat-expansion-panel-header>\n        \n        <form [formGroup]=\"filterForm\" (ngSubmit)=\"submit()\">\n          <div class=\"row\">\n            <div class=\"col-sm-6 col-12\">\n              <mat-form-field appearance=\"outline\">\n                <mat-label>Nome do motorista</mat-label>\n                <input matInput formControlName=\"name\">\n              </mat-form-field>\n            </div>\n\n            <div class=\"col-sm-6 col-12\">\n              <mat-form-field appearance=\"outline\">\n                <mat-label>Status</mat-label>\n                <mat-select formControlName=\"status\">\n                  <mat-option value=\"\">Todos</mat-option>\n                  @for (option of statusOptions(); track option) {\n                    <mat-option [value]=\"option\">{{ option | titlecase }}</mat-option>\n                  }\n                </mat-select>\n              </mat-form-field>\n            </div>\n          </div>\n\n          <div class=\"row\">\n            <div class=\"col-12\">\n              <button type=\"submit\" mat-flat-button>Filtrar</button>\n            </div>\n          </div>\n        </form>\n      </mat-expansion-panel>\n    </mat-accordion>\n  </div>\n</div>"
+        },
+        {
+            "name": "FooterComponent",
+            "id": "component-FooterComponent-822b606c4dd482f6cef732830b24d4e441af151bb17692063c9dfd6a3e836f5001c1eb459d48a17ae762ad6fccd037d5814aa740aa1ebcb133e94eeee79a9c84",
+            "file": "src/app/footer/footer.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-footer",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./footer.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "linkedInLink",
+                    "defaultValue": "'https://www.linkedin.com/in/xmatheus-lopes/'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 11,
+                    "modifierKind": [
+                        125
+                    ]
+                }
+            ],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-footer',\n  standalone: true,\n  imports: [],\n  templateUrl: './footer.component.html',\n  styleUrl: './footer.component.scss'\n})\nexport class FooterComponent {\n  public linkedInLink = 'https://www.linkedin.com/in/xmatheus-lopes/';\n}\n",
+            "styleUrl": "./footer.component.scss",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<footer class=\"footer\">\n  <p>Developed by</p>\n  \n  <a target=\"_blank\" [href]=\"linkedInLink\">\n    <span>Matheus Lopes</span>\n    <img src=\"svgs/linkedin.svg\">\n  </a>\n</footer>\n\n"
+        },
+        {
+            "name": "SidenavComponent",
+            "id": "component-SidenavComponent-6cc019cbd9b1c3be132cc98135ab51bc1c8110d314ec2bac5b38acd3ebfffbbdaa77791d8a3a5352f6ad4386fec5aa673281056513040bd1f9db6ca51db1b6bc",
+            "file": "src/app/components/sidenav/sidenav.component.ts",
+            "changeDetection": "ChangeDetectionStrategy.OnPush",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-sidenav",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./sidenav.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "drawer",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "MatDrawer | undefined",
+                    "optional": false,
+                    "description": "",
+                    "line": 21,
+                    "decorators": [
+                        {
+                            "name": "ViewChild",
+                            "stringifiedArguments": "'drawer', {static: true}"
+                        }
+                    ],
+                    "modifierKind": [
+                        170
+                    ]
+                },
+                {
+                    "name": "sidenavItems",
+                    "defaultValue": "signal([])",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "WritableSignal<Array<literal type>>",
+                    "optional": false,
+                    "description": "",
+                    "line": 25,
+                    "modifierKind": [
+                        125
+                    ]
+                },
+                {
+                    "name": "sidenavOpened$",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "BehaviorSubject<boolean>",
+                    "optional": false,
+                    "description": "",
+                    "line": 23,
+                    "modifierKind": [
+                        125
+                    ]
+                },
+                {
+                    "name": "subscriptions$",
+                    "defaultValue": "[]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Subscription[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 24,
+                    "modifierKind": [
+                        125
+                    ]
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "isActive",
+                    "args": [
+                        {
+                            "name": "route",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "boolean",
+                    "typeParameters": [],
+                    "line": 60,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "route",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "ngAfterViewInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 34,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "ngOnDestroy",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 66,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "setupSideNavConfiguration",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 47,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "subscribeDrawerToggle",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 39,
+                    "deprecated": false,
+                    "deprecationMessage": ""
                 }
             ],
             "deprecated": false,
@@ -167,13 +1363,32 @@
                 {
                     "name": "CommonModule",
                     "type": "module"
+                },
+                {
+                    "name": "MatButtonModule",
+                    "type": "module"
+                },
+                {
+                    "name": "MatSidenavModule",
+                    "type": "module"
+                },
+                {
+                    "name": "RouterOutlet"
+                },
+                {
+                    "name": "MatListModule",
+                    "type": "module"
+                },
+                {
+                    "name": "MatIconModule",
+                    "type": "module"
                 }
             ],
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { HttpClient } from '@angular/common/http';\nimport { Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'app-hello',\n  standalone: true,\n  imports: [CommonModule],\n  templateUrl: './hello.component.html',\n  styleUrl: './hello.component.scss'\n})\nexport class HelloComponent {\n  @Input() title = 'hello works!';\n\n  public content: any;\n\n  constructor(private http: HttpClient) {}\n\n  ngOnInit() {\n    this.getContent();\n  }\n\n  public resetTitle() {\n    this.title = 'hello works';\n  }\n\n  public getContent() {\n    this.callApi().subscribe(res => {\n      this.content = res;\n    })\n  }\n\n  public callApi() {\n    return this.http.get('https://viacep.com.br/ws/01001000/json/');\n  }\n}\n",
-            "styleUrl": "./hello.component.scss",
+            "sourceCode": "import { AfterViewInit, ChangeDetectionStrategy, Component, OnDestroy, signal, ViewChild, WritableSignal } from '@angular/core';\nimport { SidenavService } from './services/sidenav.service';\nimport { CommonModule, Location } from '@angular/common';\nimport { BehaviorSubject, Subscription } from 'rxjs';\n\nimport { MatButtonModule } from '@angular/material/button';\nimport { MatDrawer, MatSidenavModule } from '@angular/material/sidenav';\nimport { RouterOutlet } from '@angular/router';\nimport { MatListModule } from '@angular/material/list';\nimport { MatIconModule } from '@angular/material/icon';\n\n@Component({\n  selector: 'app-sidenav',\n  standalone: true,\n  imports: [CommonModule, MatButtonModule, MatSidenavModule, RouterOutlet, MatListModule, MatIconModule],\n  templateUrl: './sidenav.component.html',\n  styleUrl: './sidenav.component.scss',\n  changeDetection: ChangeDetectionStrategy.OnPush,\n})\nexport class SidenavComponent implements AfterViewInit, OnDestroy {\n  @ViewChild('drawer', { static: true }) drawer: MatDrawer | undefined;\n\n  public sidenavOpened$: BehaviorSubject<boolean>;\n  public subscriptions$: Subscription[] = [];\n  public sidenavItems: WritableSignal<Array<{title: string, route: string}>> = signal([]);\n  \n  constructor(\n    private sidenavService: SidenavService, \n    private location: Location\n  ) {\n    this.sidenavOpened$ = this.sidenavService.getSidenavOpenAction();\n  }\n\n  ngAfterViewInit() {\n    this.subscribeDrawerToggle();\n    this.setupSideNavConfiguration();\n  }\n\n  subscribeDrawerToggle() {\n    const sub$ = this.sidenavOpened$.subscribe(opened => {\n      opened ? this.drawer!.open() : this.drawer!.close()\n    })\n\n    this.subscriptions$.push(sub$);\n  }  \n  \n  setupSideNavConfiguration(){\n    this.sidenavItems.set([\n      {\n        title: 'Dashboard',\n        route: '/dashboard'\n      },\n      {\n        title: 'Entregas',\n        route: '/entregas'\n      }\n    ]);\n  }\n\n  isActive(route: string): boolean {\n    const currentPath = this.location.path();\n    const expression = `^${route}`;\n    return new RegExp(expression).test(`${currentPath}`);\n  }\n\n  ngOnDestroy(): void {\n    this.subscriptions$.forEach(sub => sub.unsubscribe());\n  }\n}\n\n",
+            "styleUrl": "./sidenav.component.scss",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
@@ -184,17 +1399,32 @@
                 "deprecationMessage": "",
                 "args": [
                     {
-                        "name": "http",
-                        "type": "HttpClient",
+                        "name": "sidenavService",
+                        "type": "SidenavService",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    },
+                    {
+                        "name": "location",
+                        "type": "Location",
                         "deprecated": false,
                         "deprecationMessage": ""
                     }
                 ],
-                "line": 15,
+                "line": 25,
                 "jsdoctags": [
                     {
-                        "name": "http",
-                        "type": "HttpClient",
+                        "name": "sidenavService",
+                        "type": "SidenavService",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "location",
+                        "type": "Location",
                         "deprecated": false,
                         "deprecationMessage": "",
                         "tagName": {
@@ -204,12 +1434,290 @@
                 ]
             },
             "extends": [],
-            "templateData": "<p>{{ title }}</p>\n<button (click)=\"resetTitle()\">Reset</button>\n\n{{ content | json }}\n"
+            "implements": [
+                "AfterViewInit",
+                "OnDestroy"
+            ],
+            "templateData": "<mat-drawer-container class=\"drawer-container\">\n  <mat-drawer #drawer class=\"drawer-sidenav\" mode=\"over\">\n    <mat-nav-list>\n      @for (item of sidenavItems(); track item) {\n        <a mat-list-item [href]=\"item.route\" [activated]=\"isActive(item.route)\">{{ item.title }}</a>\n      }\n    </mat-nav-list>\n  </mat-drawer>\n\n  <div class=\"drawer-sidenav-content\">\n    <router-outlet></router-outlet>\n  </div>\n\n</mat-drawer-container>\n\n\n"
+        },
+        {
+            "name": "TableComponent",
+            "id": "component-TableComponent-d41bd70634c726c118cc023355ca15ce4e8470db755144dc0aeabfa5cadd2a2190a934b6111b1a69bcdd4e0eb82d4f6a8df25b6cd3de39385238c92d8c17c5f8",
+            "file": "src/app/components/table/table.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-table",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./table.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "bindDisplayedColumnWithElement",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 20,
+                    "type": "literal type[]",
+                    "decorators": []
+                },
+                {
+                    "name": "displayedColumns",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 19,
+                    "type": "string[] | undefined",
+                    "decorators": []
+                },
+                {
+                    "name": "sourceData",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 18,
+                    "type": "any[] | undefined",
+                    "decorators": []
+                },
+                {
+                    "name": "subtitle",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 17,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "title",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 16,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "MatTableModule",
+                    "type": "module"
+                },
+                {
+                    "name": "MatCardModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { SuccessDeliveryData } from '../../dashboard/types/SuccessDeliveryData';\nimport { FailureDeliveryData } from '../../dashboard/types/FailureDeliveryData';\nimport { NeighborhoodDeliveryData } from '../../dashboard/types/NeighborhoodDeliveryData';\nimport { MatTableModule } from '@angular/material/table';\nimport { MatCardModule } from '@angular/material/card';\n\n@Component({\n  selector: 'app-table',\n  standalone: true,\n  imports: [MatTableModule, MatCardModule],\n  templateUrl: './table.component.html',\n  styleUrl: './table.component.scss'\n})\nexport class TableComponent {\n  @Input() title!: string;\n  @Input() subtitle!: string;\n  @Input() sourceData: any[] | undefined;\n  @Input() displayedColumns: string[] | undefined;\n  @Input() bindDisplayedColumnWithElement!: { def: string, elementName: string, displayColumnName: string}[];\n}\n",
+            "styleUrl": "./table.component.scss",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "templateData": "@if (sourceData) {\n  <table mat-table [dataSource]=\"sourceData\" class=\"mat-elevation-z8\">\n    @for(item of bindDisplayedColumnWithElement; track item) {\n      <ng-container [matColumnDef]=\"item.def\">\n        <th mat-header-cell *matHeaderCellDef>{{ item.displayColumnName }}</th>\n        <td mat-cell *matCellDef=\"let element\">{{element[item.elementName]}}</td>\n      </ng-container>\n    }\n  \n    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n  </table>\n}"
+        },
+        {
+            "name": "TableDashboardComponent",
+            "id": "component-TableDashboardComponent-5d455c10a4acd37217236bae1d05b4f95aff55cf061f453f38297f463a786fefc170e567aeb21f7802a32983b668a1415c2bf7b0100568f4c926d5fda78c0397",
+            "file": "src/app/dashboard/table/table.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-dashboard-table",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./table.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "bindDisplayedColumnWithElement",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 17,
+                    "type": "literal type[]",
+                    "decorators": []
+                },
+                {
+                    "name": "displayedColumns",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 16,
+                    "type": "string[] | undefined",
+                    "decorators": []
+                },
+                {
+                    "name": "sourceData",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 15,
+                    "type": "any[] | undefined",
+                    "decorators": []
+                },
+                {
+                    "name": "subtitle",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 14,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "title",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 13,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "TableComponent",
+                    "type": "component"
+                },
+                {
+                    "name": "MatCardModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { MatCardModule } from '@angular/material/card';\nimport { TableComponent } from '@src/app/components/table/table.component';\n\n@Component({\n  selector: 'app-dashboard-table',\n  standalone: true,\n  imports: [TableComponent, MatCardModule],\n  templateUrl: './table.component.html',\n  styleUrl: './table.component.scss'\n})\nexport class TableDashboardComponent {\n  @Input() title!: string;\n  @Input() subtitle!: string;\n  @Input() sourceData: any[] | undefined;\n  @Input() displayedColumns: string[] | undefined;\n  @Input() bindDisplayedColumnWithElement!: { def: string, elementName: string, displayColumnName: string}[];\n}\n",
+            "styleUrl": "./table.component.scss",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<section class=\"table-data\">\n  <mat-card appearance=\"outlined\">\n    <div class=\"header\">\n      <h6>{{ title }}</h6>\n      <p>{{ subtitle }}</p>\n    </div>\n\n    <mat-card-content>\n      <app-table\n        [sourceData]=\"sourceData\"\n        [displayedColumns]=\"displayedColumns\"\n        [bindDisplayedColumnWithElement]=\"bindDisplayedColumnWithElement\"\n      />\n    </mat-card-content>\n  </mat-card>\n</section>"
+        },
+        {
+            "name": "ToolbarComponent",
+            "id": "component-ToolbarComponent-b6d74018ddca7a2fbeb245689d77951aa3fe92c4c7ee6d73ebad52cdc2c74bf56f014944a22e98cebacb6acc99b5bf1ee399b283f611c919c04357b1ef44b7f8",
+            "file": "src/app/components/toolbar/toolbar.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-toolbar",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./toolbar.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "openSideNav",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 17,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "MatToolbarModule",
+                    "type": "module"
+                },
+                {
+                    "name": "MatButtonModule",
+                    "type": "module"
+                },
+                {
+                    "name": "MatIconModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\nimport { MatIconModule } from '@angular/material/icon';\nimport { MatButtonModule } from '@angular/material/button';\nimport { MatToolbarModule } from '@angular/material/toolbar';\nimport { SidenavService } from '../sidenav/services/sidenav.service';\n\n@Component({\n  selector: 'app-toolbar',\n  standalone: true,\n  imports: [MatToolbarModule, MatButtonModule, MatIconModule],\n  templateUrl: './toolbar.component.html',\n  styleUrl: './toolbar.component.scss'\n})\nexport class ToolbarComponent {\n  constructor(private sidenavService: SidenavService) {}\n\n  openSideNav() {\n    this.sidenavService.toggleSidenav();\n  }\n}\n",
+            "styleUrl": "./toolbar.component.scss",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "sidenavService",
+                        "type": "SidenavService",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 14,
+                "jsdoctags": [
+                    {
+                        "name": "sidenavService",
+                        "type": "SidenavService",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "extends": [],
+            "templateData": "<mat-toolbar class=\"toolbar\">\n  <button mat-icon-button aria-label=\"Open sidenav\" (click)=\"openSideNav()\">\n    <mat-icon color=\"primary\">menu</mat-icon>\n  </button>\n  <span class=\"title\">Entregas</span>\n</mat-toolbar>"
         }
     ],
     "modules": [],
     "miscellaneous": {
         "variables": [
+            {
+                "name": "addParam",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/mocks/handlers.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "(param: string | null, objParams: any, key: string) => {\n  if (param) objParams[key] = param;\n  return objParams;\n}"
+            },
             {
                 "name": "appConfig",
                 "ctype": "miscellaneous",
@@ -218,7 +1726,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "ApplicationConfig",
-                "defaultValue": "{\n  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes), provideHttpClient()]\n}"
+                "defaultValue": "{\n  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes), provideHttpClient(), provideAnimationsAsync()]\n}"
             },
             {
                 "name": "environment",
@@ -241,6 +1749,16 @@
                 "defaultValue": "{\n  production: true\n}"
             },
             {
+                "name": "filterBy",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/mocks/handlers.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "(items: Array<any>, key: string, value: unknown) => {\n  return items.filter(item => resolvePath(item, key, {}).includes(value));\n}"
+            },
+            {
                 "name": "handlers",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -248,7 +1766,27 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "[]",
-                "defaultValue": "[\n  // Intercept \"GET https://example.com/user\" requests...\n  http.get('https://viacep.com.br/ws/01001000/json/', () => {\n    // ...and respond to them using this JSON response.\n    return HttpResponse.json({\n      id: 'c7b3d8e0-5e0b-4b0f-8b3a-3b9f4b3d3b3d',\n      firstName: 'John',\n      lastName: 'Maverick',\n    })\n  }),\n]"
+                "defaultValue": "[\n  http.get('/deliveries', ({ request }) => {\n    const url = new URL(request.url);\n\n    let params: DeliveryFilterConfiguration = {} as DeliveryFilterConfiguration;\n    params = addParam(url.searchParams.get('name'), params, 'name');\n    params = addParam(url.searchParams.get('status'), params, 'status');\n    params = addParam(url.searchParams.get('page'), params, 'page');\n    params = addParam(url.searchParams.get('pageSize'), params, 'pageSize');\n    \n    let deliveriesCopy = deliveries;\n    let totalItems = deliveriesCopy.length;\n    if (hasParams(params)) {\n      if (params.name) {\n        deliveriesCopy = filterBy(deliveriesCopy, 'motorista.nome', params.name);\n      }\n\n      if (params.status) {\n        deliveriesCopy = filterBy(deliveriesCopy, 'status_entrega', params.status);\n      }\n\n      totalItems = deliveriesCopy.length;\n\n      if (params.page && params.pageSize) {\n        deliveriesCopy = sliceArr(deliveriesCopy, params.page, params.pageSize);\n      }\n    }\n    \n    return new HttpResponse(JSON.stringify(deliveriesCopy), { \n      headers: { \n        'Content-Type': 'application/json',\n        'total-items': totalItems.toString() \n      } \n    });\n  }),\n]"
+            },
+            {
+                "name": "hasParams",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/mocks/handlers.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "(params: {}) => {\n  return Object.keys(params).length > 0;\n}"
+            },
+            {
+                "name": "resolvePath",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/mocks/handlers.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "(object: any, path: string, defaultValue: unknown) => {\n  return path\n    .split('.')\n    .reduce((o: any, p: string) => o ? o[p] : defaultValue, object)\n}"
             },
             {
                 "name": "server",
@@ -259,6 +1797,16 @@
                 "deprecationMessage": "",
                 "type": "",
                 "defaultValue": "setupServer(...handlers)"
+            },
+            {
+                "name": "sliceArr",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/mocks/handlers.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "(items: Array<any>, page: number, pageSize: number) => {\n  return items.slice(page, pageSize);\n}"
             },
             {
                 "name": "worker",
@@ -283,9 +1831,208 @@
                 "args": []
             }
         ],
-        "typealiases": [],
-        "enumerations": [],
+        "typealiases": [
+            {
+                "name": "Delivery",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "literal type",
+                "file": "src/app/deliveries/types/Delivery.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 187
+            },
+            {
+                "name": "DeliveryFilterConfiguration",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "literal type",
+                "file": "src/app/deliveries/types/DeliveryFilterConfiguration.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 187
+            },
+            {
+                "name": "DeliveryTableSourceData",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "literal type",
+                "file": "src/app/deliveries/types/DeliveryTableSourceData.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 187
+            },
+            {
+                "name": "FailureDeliveryData",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "literal type",
+                "file": "src/app/dashboard/types/FailureDeliveryData.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 187
+            },
+            {
+                "name": "NeighborhoodDeliveryData",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "literal type",
+                "file": "src/app/dashboard/types/NeighborhoodDeliveryData.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 187
+            },
+            {
+                "name": "ReportDataConfiguration",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "literal type",
+                "file": "src/app/dashboard/types/ReportDataConfiguration.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 187
+            },
+            {
+                "name": "SuccessDeliveryData",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "literal type",
+                "file": "src/app/dashboard/types/SuccessDeliveryData.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 187
+            }
+        ],
+        "enumerations": [
+            {
+                "name": "ReportType",
+                "childs": [
+                    {
+                        "name": "SUCCESS_DELIVERY",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "value": "SUCCESS_DELIVERY"
+                    },
+                    {
+                        "name": "FAILURE_DELIVERY",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "value": "FAILURE_DELIVERY"
+                    },
+                    {
+                        "name": "NEIGHBORHOOD_DELIVERY",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "value": "NEIGHBORHOOD_DELIVERY"
+                    }
+                ],
+                "ctype": "miscellaneous",
+                "subtype": "enum",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "file": "src/app/dashboard/enums/ReportType.ts"
+            },
+            {
+                "name": "Status",
+                "childs": [
+                    {
+                        "name": "ENTREGUE",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "value": "ENTREGUE"
+                    },
+                    {
+                        "name": "PENDENTE",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "value": "PENDENTE"
+                    },
+                    {
+                        "name": "INSUCESSO",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "value": "INSUCESSO"
+                    }
+                ],
+                "ctype": "miscellaneous",
+                "subtype": "enum",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "file": "src/app/deliveries/types/Status.ts"
+            }
+        ],
         "groupedVariables": {
+            "src/mocks/handlers.ts": [
+                {
+                    "name": "addParam",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/mocks/handlers.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "(param: string | null, objParams: any, key: string) => {\n  if (param) objParams[key] = param;\n  return objParams;\n}"
+                },
+                {
+                    "name": "filterBy",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/mocks/handlers.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "(items: Array<any>, key: string, value: unknown) => {\n  return items.filter(item => resolvePath(item, key, {}).includes(value));\n}"
+                },
+                {
+                    "name": "handlers",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/mocks/handlers.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "[]",
+                    "defaultValue": "[\n  http.get('/deliveries', ({ request }) => {\n    const url = new URL(request.url);\n\n    let params: DeliveryFilterConfiguration = {} as DeliveryFilterConfiguration;\n    params = addParam(url.searchParams.get('name'), params, 'name');\n    params = addParam(url.searchParams.get('status'), params, 'status');\n    params = addParam(url.searchParams.get('page'), params, 'page');\n    params = addParam(url.searchParams.get('pageSize'), params, 'pageSize');\n    \n    let deliveriesCopy = deliveries;\n    let totalItems = deliveriesCopy.length;\n    if (hasParams(params)) {\n      if (params.name) {\n        deliveriesCopy = filterBy(deliveriesCopy, 'motorista.nome', params.name);\n      }\n\n      if (params.status) {\n        deliveriesCopy = filterBy(deliveriesCopy, 'status_entrega', params.status);\n      }\n\n      totalItems = deliveriesCopy.length;\n\n      if (params.page && params.pageSize) {\n        deliveriesCopy = sliceArr(deliveriesCopy, params.page, params.pageSize);\n      }\n    }\n    \n    return new HttpResponse(JSON.stringify(deliveriesCopy), { \n      headers: { \n        'Content-Type': 'application/json',\n        'total-items': totalItems.toString() \n      } \n    });\n  }),\n]"
+                },
+                {
+                    "name": "hasParams",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/mocks/handlers.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "(params: {}) => {\n  return Object.keys(params).length > 0;\n}"
+                },
+                {
+                    "name": "resolvePath",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/mocks/handlers.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "(object: any, path: string, defaultValue: unknown) => {\n  return path\n    .split('.')\n    .reduce((o: any, p: string) => o ? o[p] : defaultValue, object)\n}"
+                },
+                {
+                    "name": "sliceArr",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/mocks/handlers.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "(items: Array<any>, page: number, pageSize: number) => {\n  return items.slice(page, pageSize);\n}"
+                }
+            ],
             "src/app/app.config.ts": [
                 {
                     "name": "appConfig",
@@ -295,7 +2042,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "ApplicationConfig",
-                    "defaultValue": "{\n  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes), provideHttpClient()]\n}"
+                    "defaultValue": "{\n  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes), provideHttpClient(), provideAnimationsAsync()]\n}"
                 }
             ],
             "src/environments/environment.development.ts": [
@@ -320,18 +2067,6 @@
                     "deprecationMessage": "",
                     "type": "object",
                     "defaultValue": "{\n  production: true\n}"
-                }
-            ],
-            "src/mocks/handlers.ts": [
-                {
-                    "name": "handlers",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/mocks/handlers.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "[]",
-                    "defaultValue": "[\n  // Intercept \"GET https://example.com/user\" requests...\n  http.get('https://viacep.com.br/ws/01001000/json/', () => {\n    // ...and respond to them using this JSON response.\n    return HttpResponse.json({\n      id: 'c7b3d8e0-5e0b-4b0f-8b3a-3b9f4b3d3b3d',\n      firstName: 'John',\n      lastName: 'Maverick',\n    })\n  }),\n]"
                 }
             ],
             "src/mocks/node.ts": [
@@ -373,8 +2108,163 @@
                 }
             ]
         },
-        "groupedEnumerations": {},
-        "groupedTypeAliases": {}
+        "groupedEnumerations": {
+            "src/app/dashboard/enums/ReportType.ts": [
+                {
+                    "name": "ReportType",
+                    "childs": [
+                        {
+                            "name": "SUCCESS_DELIVERY",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "value": "SUCCESS_DELIVERY"
+                        },
+                        {
+                            "name": "FAILURE_DELIVERY",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "value": "FAILURE_DELIVERY"
+                        },
+                        {
+                            "name": "NEIGHBORHOOD_DELIVERY",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "value": "NEIGHBORHOOD_DELIVERY"
+                        }
+                    ],
+                    "ctype": "miscellaneous",
+                    "subtype": "enum",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "file": "src/app/dashboard/enums/ReportType.ts"
+                }
+            ],
+            "src/app/deliveries/types/Status.ts": [
+                {
+                    "name": "Status",
+                    "childs": [
+                        {
+                            "name": "ENTREGUE",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "value": "ENTREGUE"
+                        },
+                        {
+                            "name": "PENDENTE",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "value": "PENDENTE"
+                        },
+                        {
+                            "name": "INSUCESSO",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "value": "INSUCESSO"
+                        }
+                    ],
+                    "ctype": "miscellaneous",
+                    "subtype": "enum",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "file": "src/app/deliveries/types/Status.ts"
+                }
+            ]
+        },
+        "groupedTypeAliases": {
+            "src/app/deliveries/types/Delivery.ts": [
+                {
+                    "name": "Delivery",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "literal type",
+                    "file": "src/app/deliveries/types/Delivery.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 187
+                }
+            ],
+            "src/app/deliveries/types/DeliveryFilterConfiguration.ts": [
+                {
+                    "name": "DeliveryFilterConfiguration",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "literal type",
+                    "file": "src/app/deliveries/types/DeliveryFilterConfiguration.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 187
+                }
+            ],
+            "src/app/deliveries/types/DeliveryTableSourceData.ts": [
+                {
+                    "name": "DeliveryTableSourceData",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "literal type",
+                    "file": "src/app/deliveries/types/DeliveryTableSourceData.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 187
+                }
+            ],
+            "src/app/dashboard/types/FailureDeliveryData.ts": [
+                {
+                    "name": "FailureDeliveryData",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "literal type",
+                    "file": "src/app/dashboard/types/FailureDeliveryData.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 187
+                }
+            ],
+            "src/app/dashboard/types/NeighborhoodDeliveryData.ts": [
+                {
+                    "name": "NeighborhoodDeliveryData",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "literal type",
+                    "file": "src/app/dashboard/types/NeighborhoodDeliveryData.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 187
+                }
+            ],
+            "src/app/dashboard/types/ReportDataConfiguration.ts": [
+                {
+                    "name": "ReportDataConfiguration",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "literal type",
+                    "file": "src/app/dashboard/types/ReportDataConfiguration.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 187
+                }
+            ],
+            "src/app/dashboard/types/SuccessDeliveryData.ts": [
+                {
+                    "name": "SuccessDeliveryData",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "literal type",
+                    "file": "src/app/dashboard/types/SuccessDeliveryData.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 187
+                }
+            ]
+        }
     },
     "routes": [],
     "coverage": {
@@ -401,12 +2291,102 @@
                 "status": "low"
             },
             {
-                "filePath": "src/app/hello/hello.component.ts",
+                "filePath": "src/app/components/sidenav/services/sidenav.service.ts",
+                "type": "injectable",
+                "linktype": "injectable",
+                "name": "SidenavService",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/sidenav/sidenav.component.ts",
                 "type": "component",
                 "linktype": "component",
-                "name": "HelloComponent",
+                "name": "SidenavComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/8",
+                "coverageCount": "0/11",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/table/table.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "TableComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/6",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/toolbar/toolbar.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ToolbarComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/dashboard/dashboard.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "DashboardComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/13",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/dashboard/services/dashboard.service.ts",
+                "type": "injectable",
+                "linktype": "injectable",
+                "name": "DashboardService",
+                "coveragePercent": 0,
+                "coverageCount": "0/15",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/dashboard/table/table.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "TableDashboardComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/6",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/deliveries/deliveries.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "DeliveriesComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/9",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/deliveries/filter/filter.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "FilterComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/6",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/deliveries/services/delivery.service.ts",
+                "type": "injectable",
+                "linktype": "injectable",
+                "name": "DeliveryService",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/footer/footer.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "FooterComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
                 "status": "low"
             },
             {
@@ -454,7 +2434,57 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
+                "name": "addParam",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/mocks/handlers.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "filterBy",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/mocks/handlers.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
                 "name": "handlers",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/mocks/handlers.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "hasParams",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/mocks/handlers.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "resolvePath",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/mocks/handlers.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "sliceArr",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"

@@ -7,10 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "vitest",
-    "coverage": "vitest run --coverage",
-    "test:watch": "jest --watch",
-    "storybook": "ng run delivery-test:storybook",
-    "build-storybook": "ng run delivery-test:build-storybook"
+    "coverage": "vitest run --coverage"
   },
   "private": true,
   "dependencies": {
@@ -41,14 +38,7 @@
     "@chromatic-com/storybook": "^1.6.1",
     "@compodoc/compodoc": "^1.1.25",
     "@nx/vite": "~19.1.0",
-    "@storybook/addon-docs": "^8.2.6",
-    "@storybook/addon-essentials": "^8.2.6",
-    "@storybook/addon-interactions": "^8.2.6",
-    "@storybook/addon-links": "^8.2.6",
-    "@storybook/addon-onboarding": "^8.2.6",
-    "@storybook/angular": "^8.2.6",
-    "@storybook/blocks": "^8.2.6",
-    "@storybook/test": "^8.2.6",
+    "@testing-library/jest-dom": "^6.4.8",
     "@types/jasmine": "~5.1.0",
     "@types/jest": "^29.5.12",
     "@vitest/coverage-istanbul": "^1.3.1",
@@ -63,8 +53,6 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "msw": "^2.3.4",
-    "msw-storybook-addon": "^2.0.3",
-    "storybook": "^8.2.6",
     "typescript": "~5.5.2",
     "vite-tsconfig-paths": "^4.2.0",
     "vitest": "^1.3.1"
